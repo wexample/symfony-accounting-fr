@@ -1,0 +1,988 @@
+number;label;nature;lettrable;level
+1;Comptes de capitaux;credit;0;short
+10;Fonds associatifs et réserves;credit;0;base
+102;Fonds associatifs sans droit de reprise;credit;0;base
+1021;Valeur du patrimoine intégré;credit;0;base
+1022;Fonds statutaires (à éclater en fonction des statuts);credit;0;base
+1024;Apports sans droit de reprise;credit;0;base
+1025;Legs et donations avec contrepartie d’actifs immobilisés;credit;0;base
+1026;Subventions d’investissement affectées à des biens renouvelables;credit;0;base
+103;Fonds associatifs avec droit de reprise;credit;0;base
+1034;Apports avec droit de reprise;credit;0;base
+1035;Legs et donations avec contrepartie d’actifs immobilisés assortis d’une obligation ou d’une condition;credit;0;base
+1036;Subventions d’investissement affectées à des biens renouvelables;credit;0;base
+105;Ecarts de réévaluation;credit;0;base
+1051;Ecarts de réévaluation sur des biens sans droit de reprise;credit;0;base
+1052;Ecarts de réévaluation sur des biens avec droit de reprise;credit;0;base
+106;Réserves;credit;0;base
+1062;Réserves indisponibles;credit;0;base
+1063;Réserves statutaires ou contractuelles;credit;0;base
+1064;Réserves réglementées;credit;0;base
+1068;Autres réserves (dont réserves pour projet associatif);credit;0;base
+11;Éléments en instance d’affectation;credit;0;base
+110;Report à nouveau;credit;0;base
+115;Résultats sous contrôle de tiers financeurs;credit;0;base
+12;Résultat de l’exercice (bénéfice ou perte);credit;0;short
+120;Résultat de l’exercice (bénéfice);credit;0;extended
+129;Résultat de l’exercice (perte);credit;0;extended
+13;Subventions d’investissements affectées à des biens non renouvelables;credit;0;base
+14;Provisions réglementées;credit;0;base
+142;Provisions réglementées relatives aux immobilisations;credit;0;base
+1423;Provisions pour reconstitution des gisements miniers et pétroliers;credit;0;extended
+1424;Provisions pour investissement (participation des salariés);credit;0;extended
+143;Provisions réglementées relatives aux stocks;credit;0;base
+1431;Hausse des prix;credit;0;extended
+1432;Fluctuation des cours;credit;0;extended
+144;Provisions réglementées relatives aux autres éléments de l’actif;credit;0;base
+145;Amortissements dérogatoires;credit;0;short
+146;Provision spéciale de réévaluation;credit;0;short
+147;Plus-values réinvesties;credit;0;short
+148;Autres provisions réglementées;credit;0;short
+15;Provisions;credit;0;short
+151;Provisions pour risques;credit;0;base
+1511;Provisions pour litiges;credit;0;extended
+1512;Provisions pour garanties données aux clients;credit;0;extended
+1513;Provisions pour pertes sur marchés à terme;credit;0;extended
+1514;Provisions pour amendes et pénalités;credit;0;extended
+1515;Provisions pour pertes de change;credit;0;extended
+1516;Provisions pour risques d’emploi;credit;0;extended
+1518;Autres provisions pour risques;credit;0;extended
+153;Provisions pour pensions et obligations similaires;credit;0;base
+154;Provisions pour restructurations;credit;0;base
+155;Provisions pour impôts;credit;0;base
+156;Provisions pour renouvellement des immobilisations (entreprises concessionnaires);credit;0;base
+157;Provisions pour charges à répartir sur plusieurs exercices;credit;0;base
+1572;Provisions pour gros entretien ou grandes révisions;credit;0;extended
+158;Autres provisions pour charges;credit;0;base
+1581;Provisions pour remises en état;credit;0;extended
+16;Emprunts et dettes assimilées;credit;0;short
+161;Emprunts obligataires convertibles;credit;0;base
+162;Obligations représentatives de passifs nets remis en fiducie;credit;0;base
+163;Autres emprunts obligataires;credit;0;base
+164;Emprunts auprès des établissements de crédit;credit;0;base
+165;Dépôts et cautionnements reçus;credit;0;base
+1651;Dépôts;credit;0;extended
+1655;Cautionnements;credit;0;extended
+166;Participation des salariés aux résultats;credit;0;extended
+1661;Comptes bloqués;credit;0;extended
+1662;Fonds de participation;credit;0;extended
+167;Emprunts et dettes assortis de conditions particulières;credit;0;base
+1671;Émissions de titres participatifs;credit;0;base
+1674;Avances conditionnées de l’État;credit;0;base
+1675;Emprunts participatifs;credit;0;base
+168;Autres emprunts et dettes assimilées;credit;0;base
+1681;Autres emprunts;credit;0;extended
+1685;Rentes viagères capitalisées;credit;0;extended
+1687;Autres dettes;credit;0;extended
+1688;Intérêts courus;credit;0;extended
+16881;sur emprunts obligataires convertibles;credit;0;extended
+16883;sur autres emprunts obligataires;credit;0;extended
+16884;sur emprunts auprès des établissements de crédit;credit;0;extended
+16885;sur dépôts et cautionnements reçus;credit;0;extended
+16886;sur participation des salariés aux résultats;credit;0;extended
+16887;sur emprunts et dettes assortis de conditions particulières;credit;0;extended
+16888;sur autres emprunts et dettes assimilées;credit;0;extended
+169;Primes de remboursement des obligations;credit;0;base
+17;Dettes rattachées à des participations;credit;0;base
+171;Dettes rattachées à des participations (groupe);credit;0;base
+174;Dettes rattachées à des participations (hors groupe);credit;0;base
+178;Dettes rattachées à des sociétés en participation;credit;0;base
+1781;Principal;credit;0;extended
+1788;Intérêts courus;credit;0;extended
+18;Comptes de liaison des établissements et sociétés en participation;credit;0;base
+181;Apports permanents entre siège social et établissements;credit;0;extended
+185;Biens et prestations de services échangés entre établissements et le siège social;credit;0;base
+186;Biens et prestations de services échangés entre établissements (charges);credit;0;extended
+187;Biens et prestations de services échangés entre établissements (produits);credit;0;extended
+188;Comptes de liaison des sociétés en participation;credit;0;extended
+19;Fonds dédiés;credit;0;base
+194;Fonds dédiés sur subventions de fonctionnement;credit;0;base
+195;Fonds dédiés sur dons manuels affectés;credit;0;base
+197;Fonds dédiés sur legs et donations affectés;credit;0;base
+2;Comptes d’immobilisations;credit;0;short
+20;Immobilisations incorporelles;credit;0;short
+201;Frais d’établissement;credit;0;short
+2011;Frais de constitution;credit;0;extended
+2012;Frais de premier établissement;credit;0;extended
+20121;Frais de prospection;credit;0;extended
+20122;Frais de publicité;credit;0;extended
+2013;Frais d’augmentation de capital et d’opérations diverses (fusions, scissions, transformations);credit;0;extended
+203;Frais de recherche et de développement;credit;0;base
+205;Concessions et droits similaires, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires;credit;0;base
+206;Droit au bail;credit;0;short
+207;Fonds commercial;credit;0;short
+208;Autres immobilisations incorporelles;credit;0;short
+2081;Mali de fusion sur actifs incorporels;credit;0;base
+21;Immobilisations corporelles;credit;0;short
+211;Terrains;credit;0;base
+2111;Terrains nus;credit;0;base
+2112;Terrains aménagés;credit;0;base
+2113;Sous-sols et sursols;credit;0;base
+2114;Terrains de carrières (Tréfonds);credit;0;base
+2115;Terrains bâtis;credit;0;base
+21151;Ensembles immobiliers industriels (A, B);credit;0;extended
+21155;Ensembles immobiliers administratifs et commerciaux (A, B);credit;0;extended
+21158;Autres ensembles immobiliers;credit;0;extended
+211581;affectés aux opérations professionnelles (A, B);credit;0;extended
+211588;affectés aux opérations non professionnelles (A, B);credit;0;extended
+2116;Compte d’ordre sur immobilisations;credit;0;base
+212;Agencements et aménagements de terrains (même ventilation que celle du compte 211);credit;0;base
+213;Constructions;credit;0;base
+2131;Bâtiments;credit;0;base
+21311;Ensembles immobiliers industriels (A, B);credit;0;extended
+21315;Ensembles immobiliers administratifs et commerciaux (A, B);credit;0;extended
+21318;Autres ensembles immobiliers;credit;0;extended
+213181;affectés aux opérations professionnelles (A, B);credit;0;extended
+213188;affectés aux opérations non professionnelles (A, B);credit;0;extended
+2135;Installations générales – agencements – aménagements des constructions;credit;0;base
+21351;Ensembles immobiliers industriels (A, B);credit;0;extended
+21355;Ensembles immobiliers administratifs et commerciaux (A, B);credit;0;extended
+21358;Autres ensembles immobiliers;credit;0;extended
+213581;affectés aux opérations professionnelles (A, B);credit;0;extended
+213588;affectés aux opérations non professionnelles (A, B);credit;0;extended
+2138;Ouvrages d’infrastructure;credit;0;base
+21381;Voies de terre;credit;0;extended
+21382;Voies de fer;credit;0;extended
+21383;Voies d’eau;credit;0;extended
+21384;Barrages;credit;0;extended
+21385;Pistes d’aérodromes;credit;0;extended
+214;Constructions sur sol d’autrui (même ventilation que celle du compte 213);credit;0;base
+215;Installations techniques, matériels et outillage industriels;credit;0;base
+2151;Installations complexes spécialisées;credit;0;base
+21511;sur sol propre;credit;0;extended
+21514;sur sol d’autrui;credit;0;extended
+2153;Installations à caractère spécifique;credit;0;base
+21531;sur sol propre;credit;0;extended
+21534;sur sol d’autrui;credit;0;extended
+2154;Matériel industriel;credit;0;base
+2155;Outillage industriel;credit;0;base
+2157;Agencements et aménagements du matériel et outillage industriels;credit;0;base
+218;Autres immobilisations corporelles;credit;0;base
+2181;Installations générales, agencements, aménagements divers;credit;0;base
+2182;Matériel de transport;credit;0;base
+2183;Matériel de bureau et matériel informatique;credit;0;base
+2184;Mobilier;credit;0;base
+2185;Cheptel;credit;0;base
+2186;Emballages récupérables;credit;0;base
+2187;Mali de fusions sur actifs corporels;credit;0;base
+22;Immobilisations mises en concession;credit;0;base
+228;Immobilisations grevées de droits;credit;0;base
+229;Droits des propriétaires;credit;0;base
+23;Immobilisations en cours;credit;0;short
+231;Immobilisations corporelles en cours;credit;0;base
+2312;Terrains;credit;0;extended
+2313;Constructions;credit;0;extended
+2315;Installations techniques, matériel et outillage industriels;credit;0;extended
+2318;Autres immobilisations corporelles;credit;0;extended
+232;Immobilisations incorporelles en cours;credit;0;base
+237;Avances et acomptes versés sur immobilisations incorporelles;credit;0;base
+238;Avances et acomptes versés sur commandes d’immobilisations corporelles;credit;0;base
+2382;Terrains;credit;0;extended
+2383;Constructions;credit;0;extended
+2385;Installations techniques, matériel et outillage industriels;credit;0;extended
+2388;Autres immobilisations corporelles;credit;0;base
+25;Parts dans des entreprises liées et créances sur des entreprises liées;credit;0;base
+26;Participations et créances rattachées à des participations;credit;0;base
+261;Titres de participation;credit;0;base
+2611;Actions;credit;0;extended
+2618;Autres titres;credit;0;extended
+266;Autres formes de participation;credit;0;base
+2661;Droits représentatifs d’actifs nets remis en fiducie;credit;0;extended
+267;Créances rattachées à des participations;credit;0;base
+2671;Créances rattachées à des participations (groupe);credit;0;extended
+2674;Créances rattachées à des participations (hors groupe);credit;0;extended
+2675;Versements représentatifs d’apports non capitalisés (appel de fonds);credit;0;extended
+2676;Avances consolidables;credit;0;extended
+2677;Autres créances rattachées à des participations;credit;0;extended
+2678;Intérêts courus;credit;0;extended
+268;Créances rattachées à des sociétés en participation;credit;0;base
+2681;Principal;credit;0;extended
+2688;Intérêts courus;credit;0;extended
+269;Versements restant à effectuer sur titres de participation non libérés;credit;0;base
+27;Autres immobilisations financières;credit;0;short
+271;Titres immobilisés autres que les titres immobilisés de l’activité de portefeuille (droit de propriété);credit;0;base
+2711;Actions;credit;0;extended
+2718;Autres titres;credit;0;extended
+272;Titres immobilisés (droit de créance);credit;0;base
+2721;Obligations;credit;0;extended
+2722;Bons;credit;0;extended
+273;Titres immobilisés de l’activité de portefeuille;credit;0;base
+274;Prêts;credit;0;base
+2741;Prêts participatifs;credit;0;extended
+2742;Prêts aux associés;credit;0;extended
+2743;Prêts au personnel;credit;0;extended
+2748;Autres prêts;credit;0;extended
+275;Dépôts et cautionnements versés;credit;0;base
+2751;Dépôts;credit;0;extended
+2755;Cautionnements;credit;0;extended
+276;Autres créances immobilisées;credit;0;base
+2761;Créances diverses;credit;0;extended
+2768;Intérêts courus;credit;0;extended
+27682;sur titres immobilisés (droit de créance);credit;0;extended
+27684;sur prêts;credit;0;extended
+27685;sur dépôts et cautionnements;credit;0;extended
+27688;sur créances diverses;credit;0;extended
+277;(Actions propres ou parts propres);credit;0;base
+2771;Actions propres ou parts propres;credit;0;extended
+2772;Actions propres ou parts propres en voie d’annulation;credit;0;extended
+278;Mali de fusion sur actifs financiers;credit;0;base
+279;Versements restant à effectuer sur titres immobilisés non libérés;credit;0;base
+28;Amortissements des immobilisations;credit;0;base
+280;Amortissements des immobilisations incorporelles;credit;0;short
+2801;Frais d’établissement (même ventilation que celle du compte 201);credit;0;base
+2803;Frais de recherche et de développement;credit;0;base
+2805;Concessions et droits similaires, brevets, licences, logiciels, droits et valeurs similaires;credit;0;base
+2807;Fonds commercial;credit;0;base
+2808;Autres immobilisations incorporelles;credit;0;base
+28081;Amortissements du mali de fusion sur actifs incorporels;credit;0;base
+281;Amortissements des immobilisations corporelles;credit;0;short
+2812;Agencements, aménagements de terrains (même ventilation que celle du compte 212);credit;0;base
+2813;Constructions (même ventilation que celle du compte 213);credit;0;base
+2814;Constructions sur sol d’autrui (même ventilation que celle du compte 214);credit;0;base
+2815;Installations, matériel et outillage industriels (même ventilation que celle du compte 215);credit;0;base
+2818;Autres immobilisations corporelles (même ventilation que celle du compte 218);credit;0;base
+28187;Amortissement du mali de fusion sur actifs corporels;credit;0;base
+282;Amortissements des immobilisations mises en concession;credit;0;base
+29;Dépréciations des immobilisations;credit;0;base
+290;Dépréciations des immobilisations incorporelles;credit;0;short
+2905;Marques, procédés, droits et valeurs similaires;credit;0;base
+2906;Droit au bail;credit;0;base
+2907;Fonds commercial;credit;0;base
+2908;Autres immobilisations incorporelles;credit;0;base
+29081;Dépréciation du mali de fusion sur actifs incorporels;credit;0;base
+291;Dépréciations des immobilisations corporelles (même ventilation que celle du compte 21);credit;0;short
+29187;Dépréciation du mali de fusion sur actifs corporels;credit;0;base
+292;Dépréciations des immobilisations mises en concession;credit;0;base
+293;Dépréciations des immobilisations en cours;credit;0;base
+2931;Immobilisations corporelles en cours;credit;0;base
+2932;Immobilisations incorporelles en cours;credit;0;base
+296;Dépréciations des participations et créances rattachées à des participations;credit;0;base
+2961;Titres de participation;credit;0;base
+2966;Autres formes de participation;credit;0;base
+2967;Créances rattachées à des participations (même ventilation que celle du compte 267);credit;0;base
+2968;Créances rattachées à des sociétés en participation (même ventilation que celle du compte 268);credit;0;base
+297;Dépréciations des autres immobilisations financières;credit;0;short
+2971;Titres immobilisés autres que les titres immobilisés de l’activité de portefeuille – droit de propriété (même ventilation que celle du compte 271);credit;0;base
+2972;Droit de créance (même ventilation que celle du compte 272);credit;0;base
+2973;Titres immobilisés de l’activité de portefeuille;credit;0;base
+2974;Prêts (même ventilation que celle du compte 274);credit;0;base
+2975;Dépôts et cautionnements versés (même ventilation que celle du compte 275);credit;0;base
+2976;Autres créances immobilisées (même ventilation que celle du compte 276);credit;0;base
+29787;Dépréciation du mali de fusion sur actifs financiers;credit;0;base
+3;Comptes de stocks et en-cours;credit;0;short
+31;Matières premières (et fournitures);credit;0;short
+311;Matières (ou groupe) A;credit;0;base
+312;Matières (ou groupe) B;credit;0;base
+317;Fournitures A, B, C,;credit;0;base
+32;Autres approvisionnements;credit;0;short
+321;Matières consommables;credit;0;base
+3211;Matières (ou groupe) C;credit;0;extended
+3212;Matières (ou groupe) D;credit;0;extended
+322;Fournitures consommables;credit;0;base
+3221;Combustibles;credit;0;extended
+3222;Produits d’entretien;credit;0;extended
+3223;Fournitures d’atelier et d’usine;credit;0;extended
+3224;Fournitures de magasin;credit;0;extended
+3225;Fournitures de bureau;credit;0;extended
+326;Emballages;credit;0;base
+3261;Emballages perdus;credit;0;extended
+3265;Emballages récupérables non identifiables;credit;0;extended
+3267;Emballages à usage mixte;credit;0;extended
+33;En-cours de production de biens;credit;0;short
+331;Produits en cours;credit;0;base
+3311;Produits en cours P 1;credit;0;extended
+3312;Produits en cours P 2;credit;0;extended
+335;Travaux en cours;credit;0;base
+3351;Travaux en cours T 1;credit;0;extended
+3352;Travaux en cours T 2;credit;0;extended
+34;En-cours de production de services;credit;0;short
+341;Études en cours;credit;0;base
+3411;Études en cours E 1;credit;0;extended
+3412;Études en cours E 2;credit;0;extended
+345;Prestations de services en cours;credit;0;base
+3451;Prestations de services S 1;credit;0;extended
+3452;Prestations de services S 2;credit;0;extended
+35;Stocks de produits;credit;0;short
+351;Produits intermédiaires;credit;0;base
+3511;Produits intermédiaires (ou groupe) A;credit;0;extended
+3512;Produits intermédiaires (ou groupe) B;credit;0;extended
+355;Produits finis;credit;0;base
+3551;Produits finis (ou groupe) A;credit;0;extended
+3552;Produits finis (ou groupe) B;credit;0;extended
+358;Produits résiduels (ou matières de récupération);credit;0;base
+3581;Déchets;credit;0;extended
+3585;Rebuts;credit;0;extended
+3586;Matières de récupération;credit;0;extended
+37;Stocks de marchandises;credit;0;short
+371;Marchandises (ou groupe) A;credit;0;extended
+372;Marchandises (ou groupe) B;credit;0;extended
+38;(lorsque l’entité tient un inventaire permanent en comptabilité générale, le compte 38 peut être utilisé pour comptabiliser les stocks en voie d’acheminement, mis en dépôt ou donnés en consignation);credit;0;base
+39;Dépréciations des stocks et en-cours;credit;0;base
+391;Dépréciations des matières premières (et fournitures);credit;0;short
+3911;Matières (ou groupe) A;credit;0;extended
+3912;Matières (ou groupe) B;credit;0;extended
+3917;Fournitures A, B, C,;credit;0;extended
+392;Dépréciations des autres approvisionnements;credit;0;short
+3921;Matières consommables (même ventilation que celle du compte 321);credit;0;extended
+3922;Fournitures consommables (même ventilation que celle du compte 322);credit;0;extended
+3926;Emballages (même ventilation que celle du compte 326);credit;0;extended
+393;Dépréciations des en-cours de production de biens;credit;0;short
+3931;Produits en cours (même ventilation que celle du compte 331);credit;0;extended
+3935;Travaux en cours (même ventilation que celle du compte 335);credit;0;extended
+394;Dépréciations des en-cours de production de services;credit;0;short
+3941;Études en cours (même ventilation que celle du compte 341);credit;0;extended
+3945;Prestations de services en cours (même ventilation que celle du compte 345);credit;0;extended
+395;Dépréciations des stocks de produits;credit;0;short
+3951;Produits intermédiaires (même ventilation que celle du compte 351);credit;0;extended
+3955;Produits finis (même ventilation que celle du compte 355);credit;0;extended
+397;Dépréciations des stocks de marchandises;credit;0;short
+3971;Marchandise (ou groupe) A;credit;0;extended
+3972;Marchandise (ou groupe) B;credit;0;extended
+4;Comptes de tiers;credit;0;short
+40;Fournisseurs et comptes rattachés;credit;0;base
+400;Fournisseurs et comptes rattachés;credit;1;short
+401;Fournisseurs;credit;1;base
+4011;Fournisseurs – Achats de biens et prestations de services;credit;1;extended
+4017;Fournisseurs – Retenues de garantie;credit;1;extended
+403;Fournisseurs – Effets à payer;credit;1;base
+404;Fournisseurs d’immobilisations;credit;1;base
+4041;Fournisseurs – Achats d’immobilisations;credit;1;extended
+4047;Fournisseurs d’immobilisations – Retenues de garantie;credit;1;extended
+405;Fournisseurs d’immobilisations – Effets à payer;credit;1;base
+408;Fournisseurs – Factures non parvenues;credit;1;base
+4081;Fournisseurs;credit;1;extended
+4084;Fournisseurs d’immobilisations;credit;1;extended
+4088;Fournisseurs – Intérêts courus;credit;1;extended
+409;Fournisseurs débiteurs;credit;1;short
+4091;Fournisseurs – Avances et acomptes versés sur commandes;credit;1;base
+4096;Fournisseurs – Créances pour emballages et matériel à rendre;credit;1;base
+4097;Fournisseurs – Autres avoirs;credit;1;base
+40971;Fournisseurs d’exploitation;credit;1;extended
+40974;Fournisseurs d’immobilisations;credit;1;extended
+4098;Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus;credit;1;base
+41;Usagers et comptes rattachés;credit;0;base
+410;Usagers et comptes rattachés;credit;1;short
+411;Usagers;credit;1;base
+4111;Usagers – Ventes de biens ou de prestations de services;credit;1;extended
+4117;Usagers – Retenues de garantie;credit;1;extended
+413;Usagers – Effets à recevoir;credit;1;base
+416;Usagers douteux ou litigieux;credit;1;base
+418;Usagers – Produits non encore facturés;credit;1;base
+4181;Usagers – Factures à établir;credit;1;extended
+4188;Usagers – Intérêts courus;credit;1;extended
+419;Usagers créditeurs;credit;1;short
+4191;Usagers – Avances et acomptes reçus sur commandes;credit;1;base
+4196;Usagers – Dettes sur emballages et matériels consignés;credit;1;base
+4197;Usagers – Autres avoirs;credit;1;base
+4198;Rabais, remises, ristournes à accorder et autres avoirs à établir;credit;1;base
+42;Personnel et comptes rattachés;credit;0;base
+421;Personnel – Rémunérations dues;credit;0;short
+422;Comités d’entreprises, d’établissement, …;credit;0;base
+424;Participation des salariés aux résultats;credit;0;base
+4246;Réserve spéciale;credit;0;extended
+4248;Comptes courants;credit;0;extended
+425;Personnel – Avances et acomptes;credit;0;base
+426;Personnel – Dépôts;credit;0;base
+427;Personnel – Oppositions;credit;0;base
+428;Personnel – Charges à payer et produits à recevoir;credit;0;short
+4282;Dettes provisionnées pour congés à payer;credit;0;extended
+4284;Dettes provisionnées pour participation des salariés aux résultats;credit;0;extended
+4286;Autres charges à payer;credit;0;extended
+4287;Produits à recevoir;credit;0;extended
+43;Sécurité sociale et autres organismes sociaux;credit;0;short
+431;Sécurité sociale;credit;0;base
+437;Autres organismes sociaux;credit;0;base
+438;Organismes sociaux – Charges à payer et produits à recevoir;credit;0;base
+4382;Charges sociales sur congés à payer;credit;0;extended
+4386;Autres charges à payer;credit;0;extended
+4387;Produits à recevoir;credit;0;extended
+44;État et autres collectivités publiques;credit;0;base
+441;État – Subventions à recevoir;credit;0;base
+4411;Subventions d’investissement;credit;0;extended
+4417;Subventions d’exploitation;credit;0;extended
+4418;Subventions d’équilibre;credit;0;extended
+4419;Avances sur subventions;credit;0;extended
+442;État – Impôts et taxes recouvrables sur des tiers;credit;0;base
+4424;Obligataires;credit;0;extended
+4425;Associés;credit;0;extended
+443;Opérations particulières avec l’État les collectivités publiques, les organismes internationaux;credit;0;base
+4431;Créances sur l’État résultant de la suppression de la règle du décalage d’un mois en matière de TVA;credit;0;base
+4438;Intérêts courus sur créances figurant au 4431;credit;0;base
+444;État – Impôts sur les bénéfices;credit;0;short
+445;État – Taxes sur le chiffre d’affaires;credit;0;short
+4452;TVA due intracommunautaire;credit;0;base
+4455;Taxes sur le chiffre d’affaires à décaisser;credit;0;base
+44551;TVA à décaisser;credit;0;extended
+44558;Taxes assimilées à la TVA;credit;0;extended
+4456;Taxes sur le chiffre d’affaires déductibles;debit;0;base
+44562;TVA sur immobilisations;credit;0;extended
+44563;TVA transférée par d’autres entreprises;credit;0;extended
+44566;TVA sur autres biens et services;debit;0;extended
+44567;Crédit de TVA à reporter;debit;0;extended
+44568;Taxes assimilées à la TVA;credit;0;extended
+4457;Taxes sur le chiffre d’affaires collectées par l’entreprise;credit;0;base
+44571;TVA collectée;credit;0;extended
+44578;Taxes assimilées à la TVA;credit;0;extended
+4458;Taxes sur le chiffre d’affaires à régulariser ou en attente;credit;0;base
+44581;Acomptes – Régime simplifié d’imposition;credit;0;extended
+44582;Acomptes – Régime de forfait;credit;0;extended
+44583;Remboursement de taxes sur le chiffre d’affaires demandé;credit;0;extended
+44584;TVA récupérée d’avance;credit;0;extended
+44586;Taxes sur le chiffre d’affaires sur factures non parvenues;credit;0;extended
+44587;Taxes sur le chiffre d’affaires sur factures à établir;credit;0;extended
+446;Obligations cautionnées;credit;0;base
+447;Autres impôts, taxes et versements assimilés;credit;0;short
+448;État – Charges à payer et produits à recevoir;credit;0;base
+4482;Charges fiscales sur congés à payer;credit;0;extended
+4486;Charges à payer;credit;0;extended
+4487;Produits à recevoir;credit;0;extended
+449;Quotas d’émission à acquérir;credit;0;base
+45;Confédération, fédération, union, associations affiliées;credit;0;short
+451;Groupe;credit;0;base
+455;Associés – Comptes courants;credit;0;short
+4551;Principal;credit;0;extended
+4558;Intérêts courus;credit;0;extended
+456;Associés – Opérations sur le capital;credit;0;base
+4561;Associés – Comptes d’apport en société;credit;0;extended
+45611;Apports en nature;credit;0;extended
+45615;Apports en numéraire;credit;0;extended
+4562;Apporteurs – Capital appelé, non versé;credit;0;extended
+45621;Actionnaires – Capital souscrit et appelé, non versé;credit;0;extended
+45625;Associés – Capital appelé, non versé;credit;0;extended
+4563;Associés – Versements reçus sur augmentation de capital;credit;0;extended
+4564;Associés – Versements anticipés;credit;0;extended
+4566;Actionnaires défaillants;credit;0;extended
+4567;Associés – Capital à rembourser;credit;0;extended
+457;Associés – Dividendes à payer;credit;0;base
+458;Associés – Opérations faites en commun et en GIE;credit;0;base
+4581;Opérations courantes;credit;0;extended
+4588;Intérêts courus;credit;0;extended
+46;Débiteurs divers et créditeurs divers;credit;0;short
+462;Créances sur cessions d’immobilisations;credit;0;extended
+464;Dettes sur acquisitions de valeurs mobilières de placement;credit;0;extended
+465;Créances sur cessions de valeurs mobilières de placement;credit;0;extended
+467;Autres comptes débiteurs ou créditeurs;credit;0;extended
+468;Divers – Charges à payer et produits à recevoir;credit;0;extended
+4686;Charges à payer;credit;0;extended
+4687;Produits à recevoir;credit;0;extended
+47;Comptes transitoires ou d’attente;credit;0;short
+471;Comptes d’attente;credit;0;base
+472;Comptes d’attente;credit;0;base
+473;Comptes d’attente;credit;0;base
+474;Comptes d’attente;credit;0;base
+475;Legs et donations en cours de réalisation;credit;0;base
+476;Différence de conversion – Actif;credit;0;base
+4761;Diminution des créances;credit;0;extended
+4762;Augmentation des dettes;credit;0;extended
+4768;Différences compensées par couverture de change;credit;0;extended
+477;Différences de conversion – Passif;credit;0;base
+4771;Augmentation des créances;credit;0;extended
+4772;Diminution des dettes;credit;0;extended
+4778;Différences compensées par couverture de change;credit;0;extended
+478;Autres comptes transitoires;credit;0;base
+4786;Différences d’évaluation sur instruments de trésorerie – ACTIF;credit;0;base
+4787;Différences d’évaluation sur instruments de trésorerie – PASSIF;credit;0;base
+48;Comptes de régularisation;credit;0;base
+481;Charges à répartir sur plusieurs exercices;credit;0;short
+4816;Frais d’émission des emprunts;credit;0;extended
+486;Charges constatées d’avance;credit;0;short
+487;Produits constatés d’avance;credit;0;short
+488;Comptes de répartition périodique des charges et des produits;credit;0;base
+4886;Charges;credit;0;extended
+4887;Produits;credit;0;extended
+49;Dépréciations des comptes de tiers;credit;0;base
+491;Dépréciations des comptes de clients;credit;0;short
+495;Dépréciations des comptes du groupe et des associés;credit;0;base
+4951;Comptes du groupe;credit;0;base
+4955;Comptes courants des associés;credit;0;base
+4958;Opérations faites en commun et en GIE;credit;0;base
+496;Dépréciations des comptes de débiteurs divers;credit;0;short
+4962;Créances sur cessions d’immobilisations;credit;0;extended
+4965;Créances sur cessions de valeurs mobilières de placement;credit;0;extended
+4967;Autres comptes débiteurs;credit;0;extended
+5;Comptes financiers;credit;0;short
+50;Valeurs mobilières de placement;credit;0;short
+501;Parts dans des entreprises liées;credit;0;base
+502;Actions propres;credit;0;base
+5021;Actions destinées à être attribuées aux employés et affectées à des plans déterminés;credit;0;extended
+5022;Actions disponibles pour être attribuées aux employés ou pour la régularisation des cours de bourse;credit;0;extended
+503;Actions;credit;0;base
+5031;Titres cotés;credit;0;extended
+5035;Titres non cotés;credit;0;extended
+504;Autres titres conférant un droit de propriété;credit;0;base
+505;Obligations et bons émis par la société et rachetés par elle;credit;0;base
+506;Obligations;credit;0;base
+5061;Titres cotés;credit;0;extended
+5065;Titres non cotés;credit;0;extended
+507;Bons du Trésor et bons de caisse à court terme;credit;0;base
+508;Autres valeurs mobilières de placement et autres créances assimilées;credit;0;base
+5081;Autres valeurs mobilières;credit;0;extended
+5082;Bons de souscription;credit;0;extended
+5088;Intérêts courus sur obligations, bons et valeurs assimilés;credit;0;extended
+509;Versements restant à effectuer sur valeurs mobilières de placement non libérées;credit;0;base
+51;Banques, établissements financiers et assimilés;credit;0;short
+511;Valeurs à l’encaissement;credit;0;base
+5111;Coupons échus à l’encaissement;credit;0;extended
+5112;Chèques à encaisser;credit;0;extended
+5113;Effets à l’encaissement;credit;0;extended
+5114;Effets à l’escompte;credit;0;extended
+512;Banques;credit;0;base
+5121;Comptes en monnaie nationale;credit;0;extended
+5124;Comptes en devises;credit;0;extended
+514;Chèques postaux;credit;0;base
+515; Caisses  du Trésor et des établissements publics;credit;0;base
+516;Sociétés de bourse;credit;0;base
+517;Autres organismes financiers;credit;0;base
+518;Intérêts courus;credit;0;base
+5181;Intérêts courus à payer;credit;0;extended
+5188;Intérêts courus à recevoir;credit;0;extended
+519;Concours bancaires courants;credit;0;base
+5191;Crédit de mobilisation de créances commerciales;credit;0;extended
+5193;Mobilisation de créances nées à l’étranger;credit;0;extended
+5198;Intérêts courus sur concours bancaires courants;credit;0;extended
+52;Instruments de trésorerie;credit;0;base
+53;Caisse;credit;0;short
+531;Caisse siège social;credit;0;base
+5311;Caisse en monnaie nationale;credit;0;extended
+5314;Caisse en devises;credit;0;extended
+532;Caisse succursale (ou usine) A;credit;0;extended
+533;Caisse succursale (ou usine) B;credit;0;extended
+54;Régies d’avance et accréditifs;credit;0;short
+58;Virements internes;credit;0;short
+59;Dépréciations des comptes financiers;credit;0;base
+590;Dépréciations des valeurs mobilières de placement;credit;0;short
+5903;Actions;credit;0;base
+5904;Autres titres conférant un droit de propriété;credit;0;base
+5906;Obligations;credit;0;base
+5908;Autres valeurs mobilières de placement et créances assimilées;credit;0;base
+6;Comptes de charges;credit;0;short
+60;Achats (sauf 603);credit;0;short
+601;Achats stockés – Matières premières (et fournitures);credit;0;base
+6011;Matières (ou groupe) A;credit;0;extended
+6012;Matières (ou groupe) B;credit;0;extended
+6017;Fournitures A, B, C,;credit;0;extended
+602;Achats stockés – Autres approvisionnements;credit;0;base
+6021;Matières consommables;credit;0;base
+60211;Matières (ou groupe) C;credit;0;extended
+60212;Matières (ou groupe) D;credit;0;extended
+6022;Fournitures consommables;credit;0;base
+60221;Combustibles;credit;0;extended
+60222;Produits d’entretien;credit;0;extended
+60223;Fournitures d’atelier et d’usine;credit;0;extended
+60224;Fournitures de magasin;credit;0;extended
+60225;Fourniture de bureau;credit;0;extended
+6026;Emballages;credit;0;base
+60261;Emballages perdus;credit;0;extended
+60265;Emballages récupérables non identifiables;credit;0;extended
+60267;Emballages à usage mixte;credit;0;extended
+603;Variations des stocks (approvisionnements et marchandises);credit;0;short
+6031;Variation des stocks de matières premières (et fournitures);credit;0;base
+6032;Variation des stocks des autres approvisionnements;credit;0;base
+6037;Variation des stocks de marchandises 61/62 – Autres charges externes;credit;0;base
+604;Achats d’études et prestations de services;credit;0;base
+605;Achats de matériel, équipements et travaux;credit;0;base
+606;Achats non stockés de matière et fournitures;credit;0;base
+6061;Fournitures non stockables (eau, énergie, …);credit;0;extended
+6063;Fournitures d’entretien et de petit équipement;credit;0;extended
+6064;Fournitures administratives;credit;0;extended
+6068;Autres matières et fournitures;credit;0;extended
+607;Achats de marchandises;credit;0;base
+6071;Marchandise (ou groupe) A;credit;0;extended
+6072;Marchandise (ou groupe) B;credit;0;extended
+608;(Compte réservé, le cas échéant, à la récapitulation des frais accessoires incorporés aux achats);credit;0;base
+609;Rabais, remises et ristournes obtenus sur achats;credit;0;base
+6091;de matières premières (et fournitures);credit;0;extended
+6092;d’autres approvisionnements stockés;credit;0;extended
+6094;d’études et prestations de services;credit;0;extended
+6095;de matériel, équipements et travaux;credit;0;extended
+6096;d’approvisionnements non stockés;credit;0;extended
+6097;de marchandises;credit;0;extended
+6098;Rabais, remises et ristournes non affectés;credit;0;extended
+61;Services extérieurs;credit;0;short
+611;Sous-traitance générale;credit;0;base
+612;Redevances de crédit-bail;credit;0;base
+6122;Crédit-bail mobilier;credit;0;base
+6125;Crédit-bail immobilier;credit;0;base
+613;Locations;credit;0;base
+6132;Locations immobilières;credit;0;extended
+6135;Locations mobilières;credit;0;extended
+6136;Malis sur emballages;credit;0;extended
+614;Charges locatives et de copropriété;credit;0;base
+615;Entretien et réparations;credit;0;base
+6152;sur biens immobiliers;credit;0;extended
+6155;sur biens mobiliers;credit;0;extended
+6156;Maintenance;credit;0;extended
+616;Primes d’assurances;credit;0;base
+6161;Multirisques;credit;0;extended
+6162;Assurance obligatoire dommage construction;credit;0;extended
+6163;Assurance – transport;credit;0;extended
+61636;sur achats;credit;0;extended
+61637;sur ventes;credit;0;extended
+61638;sur autres biens;credit;0;extended
+6164;Risques d’exploitation;credit;0;extended
+6165;Insolvabilité clients;credit;0;extended
+617;Études et recherches;credit;0;base
+618;Divers;credit;0;base
+6181;Documentation générale;credit;0;extended
+6183;Documentation technique;credit;0;extended
+6185;Frais de colloques, séminaires, conférences;credit;0;extended
+619;Rabais, remises et ristournes obtenus sur services extérieurs;credit;0;base
+62;Autres services extérieurs;credit;0;short
+621;Personnel extérieur à l’entreprise;credit;0;base
+6211;Personnel intérimaire;credit;0;extended
+6214;Personnel détaché ou prêté à l’entreprise;credit;0;extended
+622;Rémunérations d’intermédiaires et honoraires;credit;0;base
+6221;Commissions et courtages sur achats;credit;0;extended
+6222;Commissions et courtages sur ventes;credit;0;extended
+6224;Rémunérations des transitaires;credit;0;extended
+6225;Rémunérations d’affacturage;credit;0;extended
+6226;Honoraires;credit;0;extended
+6227;Frais d’actes et de contentieux;credit;0;extended
+6228;Divers;credit;0;extended
+623;Publicité, publications, relations publiques;credit;0;base
+6231;Annonces et insertions;credit;0;extended
+6232;Échantillons;credit;0;extended
+6233;Foires et expositions;credit;0;extended
+6234;Cadeaux à la clientèle;credit;0;extended
+6235;Primes;credit;0;extended
+6236;Catalogues et imprimés;credit;0;extended
+6237;Publications;credit;0;extended
+6238;Divers (pourboires, dons courants, …);credit;0;extended
+624;Transports de biens et transports collectifs du personnel;credit;0;base
+6241;Transports sur achats;credit;0;extended
+6242;Transports sur ventes;credit;0;extended
+6243;Transports entre établissements ou chantiers;credit;0;extended
+6244;Transports administratifs;credit;0;extended
+6247;Transports collectifs du personnel;credit;0;extended
+6248;Divers;credit;0;extended
+625;Déplacements, missions et réceptions;credit;0;base
+6251;Voyages et déplacements;credit;0;extended
+6255;Frais de déménagement;credit;0;extended
+6256;Missions;credit;0;extended
+6257;Réceptions;credit;0;extended
+626;Frais postaux et de télécommunications;credit;0;base
+627;Services bancaires et assimilés;credit;0;base
+6271;Frais sur titres (achat, vente, garde);credit;0;extended
+6272;Commissions et frais sur émission d’emprunts;credit;0;extended
+6275;Frais sur effets;credit;0;extended
+6276;Location de coffres;credit;0;extended
+6278;Autres frais et commissions sur prestations de services;credit;0;extended
+628;Divers;credit;0;base
+6281;Concours divers (cotisations, );credit;0;extended
+6284;Frais de recrutement de personnel;credit;0;extended
+629;Rabais, remises et ristournes obtenus sur autres services extérieurs;credit;0;base
+63;Impôts, taxes et versements assimilés;credit;0;short
+631;Impôts, taxes et versements assimilés sur rémunérations (administrations des impôts);credit;0;base
+6311;Taxe sur les salaires;credit;0;extended
+6312;Taxe d’apprentissage;credit;0;extended
+6313;Participation des employeurs à la formation professionnelle continue;credit;0;extended
+6314;Cotisation pour défaut d’investissement obligatoire dans la construction;credit;0;extended
+6318;Autres;credit;0;extended
+633;Impôts, taxes et versements assimilés sur rémunérations (autres organismes);credit;0;base
+6331;Versement de transport;credit;0;extended
+6332;Allocations logement;credit;0;extended
+6333;Participation des employeurs à la formation professionnelle continue;credit;0;extended
+6334;Participation des employeurs à l’effort de construction;credit;0;extended
+6335;Versements libératoires ouvrant droit à l’exonération de la taxe d’apprentissage;credit;0;extended
+6338;Autres;credit;0;extended
+635;Autres impôts, taxes et versements assimilés (administrations des impôts);credit;0;base
+6351;Impôts directs (sauf impôts sur les bénéfices);credit;0;extended
+63511;Contribution économique territoriale;credit;0;extended
+63512;Taxes foncières;credit;0;extended
+63513;Autres impôts locaux;credit;0;extended
+63514;Taxe sur les véhicules des sociétés;credit;0;extended
+6352;Taxe sur le chiffre d’affaires non récupérables;credit;0;extended
+6353;Impôts indirects;credit;0;extended
+6354;Droits d’enregistrement et de timbre;credit;0;extended
+63541;Droits de mutation;credit;0;extended
+6358;Autres droits;credit;0;base
+637;Autres impôts, taxes et versements assimilés (autres organismes);credit;0;base
+6371;Contribution sociale de solidarité à la charge des sociétés;credit;0;extended
+6372;Taxes perçues par les organismes publics internationaux;credit;0;extended
+6374;Impôts et taxes exigibles à l’Étranger;credit;0;extended
+6378;Taxes diverses;credit;0;extended
+64;Charges de personnel;credit;0;base
+641;Rémunérations du personnel;credit;0;short
+6411;Salaires, appointements;credit;0;extended
+6412;Congés payés;credit;0;extended
+6413;Primes et gratifications;credit;0;extended
+6414;Indemnités et avantages divers;credit;0;extended
+6415;Supplément familial;credit;0;extended
+644;Rémunération du travail de l’exploitant;credit;0;short
+645;Charges de sécurité sociale et de prévoyance;credit;0;short
+6451;Cotisations à l’URSSAF;credit;0;extended
+6452;Cotisations aux mutuelles;credit;0;extended
+6453;Cotisations aux caisses de retraites;credit;0;extended
+6454;Cotisations aux ASSEDIC;credit;0;extended
+6458;Cotisations aux autres organismes sociaux;credit;0;extended
+646;Cotisations sociales personnelles de l’exploitant;credit;0;short
+647;Autres charges sociales;credit;0;base
+6471;Prestations directes;credit;0;extended
+6472;Versements aux comités d’entreprise et d’établissement;credit;0;extended
+6473;Versements aux comités d’hygiène et de sécurité;credit;0;extended
+6474;Versements aux autres œuvres sociales;credit;0;extended
+6475;Médecine du travail, pharmacie;credit;0;extended
+648;Autres charges de personnel;credit;0;base
+65;Autres charges de gestion courante;credit;0;short
+651;Redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires;credit;0;base
+6511;Redevances pour concessions, brevets, licences, marques, procédés, logiciels;credit;0;extended
+6516;Droits d’auteur et de reproduction;credit;0;extended
+6518;Autres droits et valeurs similaires;credit;0;extended
+653;Jetons de présence;credit;0;base
+654;Pertes sur créances irrécouvrables;credit;0;base
+6541;Créances de l’exercice;credit;0;extended
+6544;Créances des exercices antérieurs;credit;0;extended
+655;Quote-part de résultat sur opérations faites en commun;credit;0;base
+6551;Quote-part de bénéfice transférée (comptabilité du gérant);credit;0;extended
+6555;Quote-part de perte supportée (comptabilité des associés non gérants);credit;0;extended
+656;Pertes de change sur créances commerciales;credit;0;base
+657;Subventions versées par l’organisme;credit;0;base
+658;Charges diverses de gestion courante;credit;0;base
+66;Charges financières;credit;0;short
+661;Charges d’intérêts;credit;0;base
+6611;Intérêts des emprunts et dettes;credit;0;extended
+66116;des emprunts et dettes assimilées;credit;0;extended
+66117;des dettes rattachées à des participations;credit;0;extended
+6612;Charges de la fiducie, résultat de la période;credit;0;extended
+6615;Intérêts des comptes courants et des dépôts créditeurs;credit;0;extended
+6616;Intérêts bancaires et sur opérations de financement (escompte,...);credit;0;extended
+6617;Intérêts des obligations cautionnées;credit;0;extended
+6618;Intérêts des autres dettes;credit;0;extended
+66181;des dettes commerciales;credit;0;extended
+66188;des dettes diverses;credit;0;extended
+664;Pertes sur créances liées à des participations;credit;0;base
+665;Escomptes accordés;credit;0;base
+666;Pertes de change financières;credit;0;base
+667;Charges nettes sur cessions de valeurs mobilières de placement;credit;0;base
+668;Autres charges financières;credit;0;base
+67;Charges exceptionnelles;credit;0;short
+671;Charges exceptionnelles sur opérations de gestion;credit;0;base
+6711;Pénalités sur marchés (et dédits payés sur achats et ventes);credit;0;extended
+6712;Pénalités, amendes fiscales et pénales;credit;0;extended
+6713;Dons, libéralités;credit;0;extended
+6714;Créances devenues irrécouvrables dans l’exercice;credit;0;extended
+6715;Subventions accordées;credit;0;extended
+6717;Rappel d’impôts (autres qu’impôts sur les bénéfices);credit;0;extended
+6718;Autres charges exceptionnelles sur opérations de gestion;credit;0;extended
+672;(Compte à la disposition des entités pour enregistrer, en cours d’exercice, les charges sur exercices antérieurs);credit;0;base
+674;Opérations de constitution ou liquidation des fiducies;credit;0;base
+6741;Opérations liées à la constitution de fiducie – Transfert des éléments;credit;0;extended
+6742;Opérations liées à la liquidation de la fiducie;credit;0;extended
+675;Valeurs comptables des éléments d’actif cédés;credit;0;base
+6751;Immobilisations incorporelles;credit;0;extended
+6752;Immobilisations corporelles;credit;0;extended
+6756;Immobilisations financières;credit;0;extended
+6758;Autres éléments d’actif;credit;0;extended
+678;Autres charges exceptionnelles;credit;0;base
+6781;Malis provenant de clauses d’indexation;credit;0;extended
+6782;Lots;credit;0;extended
+6783;Malis provenant du rachat par l’entreprise d’actions et obligations émises par elle-même;credit;0;extended
+6788;Charges exceptionnelles diverses;credit;0;extended
+68;Dotations aux amortissements, provisions et engagements;credit;0;base
+681;Dotations aux amortissements, aux dépréciations et aux provisions – Charges d’exploitation;credit;0;short
+6811;Dotations aux amortissements sur immobilisations incorporelles et corporelles;credit;0;base
+68111;Immobilisations incorporelles;credit;0;extended
+68112;Immobilisations corporelles;credit;0;extended
+6812;Dotations aux amortissements des charges d’exploitation à répartir;credit;0;base
+6815;Dotations aux provisions d’exploitation;credit;0;base
+6816;Dotations pour dépréciations des immobilisations incorporelles et corporelles;credit;0;base
+68161;Immobilisations incorporelles;credit;0;extended
+68162;Immobilisations corporelles;credit;0;extended
+6817;Dotations pour dépréciations des actifs circulants;credit;0;base
+68173;Stocks et en-cours;credit;0;extended
+68174;Créances;credit;0;extended
+686;Dotations aux amortissements, aux dépréciations et aux provisions – Charges financières;credit;0;short
+6861;Dotations aux amortissements des primes de remboursement des obligations;credit;0;base
+6865;Dotations aux provisions financières;credit;0;base
+6866;Dotations pour dépréciations des éléments financiers;credit;0;base
+68662;Immobilisations financières;credit;0;extended
+68665;Valeurs mobilières de placement;credit;0;extended
+6868;Autres dotations;credit;0;base
+687;Dotations aux amortissements, aux dépréciations et aux provisions – Charges exceptionnelles;credit;0;short
+6871;Dotations aux amortissements exceptionnels des immobilisations;credit;0;base
+6872;Dotations aux provisions réglementées (immobilisations);credit;0;base
+68725;Amortissements dérogatoires;credit;0;extended
+6873;Dotations aux provisions réglementées (stocks);credit;0;base
+6874;Dotations aux autres provisions réglementées;credit;0;base
+6875;Dotations aux provisions exceptionnelles;credit;0;base
+6876;Dotations pour dépréciations exceptionnelles;credit;0;base
+689;Engagements à réaliser sur ressources affectées;credit;0;base
+6894;Engagements à réaliser sur subventions attribuées;credit;0;base
+6895;Engagements à réaliser sur dons manuels affectés;credit;0;base
+6897;Engagements à réaliser sur legs et donations affectés;credit;0;base
+69;Participation des salariés – Impôts sur les bénéfices et assimilés;credit;0;base
+691;Participation des salariés aux résultats;credit;0;short
+695;Impôts sur les sociétés;credit;0;short
+6951;Impôts dus en France;credit;0;extended
+6952;Contribution additionnelle à l’impôt sur les bénéfices;credit;0;extended
+6954;Impôts dus à l’étranger;credit;0;extended
+696;Suppléments d’impôt sur les sociétés liés aux distributions;credit;0;base
+698;Intégration fiscale;credit;0;base
+6981;Intégration fiscale – Charges;credit;0;base
+6989;Intégration fiscale – Produits;credit;0;base
+699;Produits – Reports en arrière des déficits;credit;0;short
+7;Comptes de produits;credit;0;short
+70;Ventes de produits fabriqués, prestations de services, marchandises;credit;0;base
+701;Ventes de produits finis;credit;0;short
+7011;Produits finis (ou groupe) A;credit;0;extended
+7012;Produits finis (ou groupe) B;credit;0;extended
+702;Ventes de produits intermédiaires;credit;0;base
+703;Ventes de produits résiduels;credit;0;base
+704;Travaux;credit;0;base
+7041;Travaux de catégorie (ou activité) A;credit;0;base
+7042;Travaux de catégorie (ou activité) B;credit;0;base
+705;Études;credit;0;base
+706;Prestations de services;credit;0;short
+707;Ventes de marchandises;credit;0;short
+7071;Marchandises (ou groupe) A;credit;0;extended
+7072;Marchandises (ou groupe) B;credit;0;extended
+708;Produits des activités annexes;credit;0;short
+7081;Produits des services exploités dans l’intérêt du personnel;credit;0;extended
+7082;Commissions et courtages;credit;0;extended
+7083;Locations diverses;credit;0;extended
+7084;Mise à disposition de personnel facturée;credit;0;extended
+7085;Ports et frais accessoires facturés;credit;0;extended
+7086;Bonis sur reprises d’emballages consignés;credit;0;extended
+7087;Bonifications obtenues des clients et primes sur ventes;credit;0;extended
+7088;Autres produits d’activités annexes (cessions d’approvisionnements,);credit;0;extended
+709;Rabais, remises et ristournes accordés par l’entreprise;credit;0;short
+7091;sur ventes de produits finis;credit;0;extended
+7092;sur ventes de produits intermédiaires;credit;0;extended
+7094;sur travaux;credit;0;extended
+7095;sur études;credit;0;extended
+7096;sur prestations de services;credit;0;extended
+7097;sur ventes de marchandises;credit;0;extended
+7098;sur produits des activités annexes;credit;0;extended
+71;Production stockée (ou déstockage);credit;0;base
+713;Variation des stocks (en-cours de production, produits);credit;0;short
+7133;Variation des en-cours de production de biens;credit;0;base
+71331;Produits en cours;credit;0;extended
+71335;Travaux en cours;credit;0;extended
+7134;Variation des en-cours de production de services;credit;0;base
+71341;Études en cours;credit;0;extended
+71345;Prestations de services en cours;credit;0;extended
+7135;Variation des stocks de produits;credit;0;base
+71351;Produits intermédiaires;credit;0;extended
+71355;Produits finis;credit;0;extended
+71358;Produits résiduels;credit;0;extended
+72;Production immobilisée;credit;0;short
+721;Immobilisations incorporelles;credit;0;base
+722;Immobilisations corporelles;credit;0;base
+74;Subventions d’exploitation;credit;0;short
+75;Autres produits de gestion courante;credit;0;short
+751;Redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires;credit;0;base
+7511;Redevances pour concessions, brevets, licences, marques, procédés, logiciels;credit;0;extended
+7516;Droits d’auteur et de reproduction;credit;0;extended
+7518;Autres droits et valeurs similaires;credit;0;extended
+752;Revenus des immeubles non affectés à des activités professionnelles;credit;0;base
+753;Jetons de présence et rémunérations d’administrateurs, gérants,;credit;0;short
+754;Ristournes perçues des coopératives (provenant des excédents);credit;0;short
+755;Quote-parts de résultat sur opérations faites en commun;credit;0;short
+7551;Quote-part de perte transférée (comptabilité du gérant);credit;0;extended
+7555;Quote-part de bénéfice attribuée (comptabilité des associés non-gérants);credit;0;extended
+756;Cotisations;credit;0;base
+758;Produits divers de gestion courante;credit;0;base
+76;Produits financiers;credit;0;short
+761;Produits de participations;credit;0;base
+7611;Revenus des titres de participation;credit;0;extended
+7612;Produits de la fiducie, résultat de la période;credit;0;extended
+7616;Revenus sur autres formes de participation;credit;0;extended
+7617;Revenus des créances rattachées à des participations;credit;0;extended
+762;Produits des autres immobilisations financières;credit;0;base
+7621;Revenus des titres immobilisés;credit;0;extended
+7626;Revenus des prêts;credit;0;extended
+7627;Revenus des créances immobilisées;credit;0;extended
+763;Revenus des autres créances;credit;0;base
+7631;Revenus des créances commerciales;credit;0;extended
+7638;Revenus des créances diverses;credit;0;extended
+764;Revenus des valeurs mobilières de placement;credit;0;base
+765;Escomptes obtenus;credit;0;base
+766;Gains de change financiers;credit;0;base
+767;Produits nets sur cessions de valeurs mobilières de placement;credit;0;base
+768;Autres produits financiers;credit;0;base
+77;Produits exceptionnels;credit;0;short
+771;Produits exceptionnels sur opérations de gestion;credit;0;base
+7711;Dédits et pénalités perçus sur achats et sur ventes;credit;0;extended
+7713;Libéralités reçues;credit;0;extended
+7714;Rentrées sur créances amorties;credit;0;extended
+7715;Subventions d’équilibre;credit;0;extended
+7717;Dégrèvements d’impôts autres qu’impôts sur les bénéfices;credit;0;extended
+7718;Autres produits exceptionnels sur opérations de gestion;credit;0;extended
+772;(Compte à la disposition des entités pour enregistrer, en cours d’exercice, les produits sur exercices antérieurs);credit;0;base
+774;Opérations de constitution ou liquidation des fiducies;credit;0;base
+7741;Opérations liées à la constitution de fiducie – Transfert des éléments;credit;0;extended
+7742;Opérations liées à la liquidation de la fiducie;credit;0;extended
+775;Produits des cessions d’éléments d’actif;credit;0;base
+7751;Immobilisations incorporelles;credit;0;extended
+7752;Immobilisations corporelles;credit;0;extended
+7756;Immobilisations financières;credit;0;extended
+7758;Autres éléments d’actif;credit;0;extended
+777;Quote-part des subventions d’investissement virée au résultat de l’exercice;credit;0;base
+778;Autres produits exceptionnels;credit;0;base
+7781;Bonis provenant de clauses d’indexation;credit;0;extended
+7782;Lots;credit;0;extended
+7783;Bonis provenant du rachat par l’entreprise d’actions et d’obligations émises par elle-même;credit;0;extended
+7788;Produits exceptionnels divers;credit;0;extended
+78;Reprises sur amortissements, dépréciations et provisions;credit;0;base
+781;Reprises sur amortissements, dépréciations et provisions (à inscrire dans les produits d’exploitation);credit;0;short
+7811;Reprises sur amortissements des immobilisations incorporelles et corporelles;credit;0;base
+78111;Immobilisations incorporelles;credit;0;extended
+78112;Immobilisations corporelles;credit;0;extended
+7815;Reprises sur provisions d’exploitation;credit;0;base
+7816;Reprises sur dépréciations des immobilisations incorporelles et corporelles;credit;0;base
+78161;Immobilisations incorporelles;credit;0;extended
+78162;Immobilisations corporelles;credit;0;extended
+7817;Reprises sur dépréciations des actifs circulants;credit;0;base
+78173;Stocks et en-cours;credit;0;extended
+78174;Créances;credit;0;extended
+786;Reprises sur provisions pour risques et dépréciations (à inscrire dans les produits financiers);credit;0;short
+7865;Reprises sur provisions financières;credit;0;base
+7866;Reprises sur dépréciations des éléments financiers;credit;0;base
+78662;Immobilisations financières;credit;0;extended
+78665;Valeurs mobilières de placements;credit;0;extended
+787;Reprises sur provisions et dépréciations (à inscrire dans les produits exceptionnels);credit;0;short
+7872;Reprises sur provisions réglementées (immobilisations);credit;0;base
+78725;Amortissements dérogatoires;credit;0;extended
+78726;Provision spéciale de réévaluation;credit;0;extended
+78727;Plus-values réinvesties;credit;0;extended
+7873;Reprises sur provisions réglementées (stocks);credit;0;base
+7874;Reprises sur autres provisions réglementées;credit;0;base
+7875;Reprises sur provisions exceptionnelles;credit;0;base
+7876;Reprises sur dépréciations exceptionnelles;credit;0;base
+789;Report des ressources non utilisées des exercices antérieurs;credit;0;base
+79;Transferts de charges;credit;0;short
+791;Transferts de charges d’exploitation;credit;0;base
+796;Transferts de charges financières;credit;0;base
+797;Transferts de charges exceptionnelles;credit;0;base
+8;Comptes spéciaux;credit;0;short
+80;Engagements;credit;0;base
+801;Engagements donnés par l’entité;credit;0;short
+8011;Avals, cautions, garanties;credit;0;extended
+8014;Effets circulant sous l’endos de l’entité;credit;0;extended
+8016;Redevances crédit-bail restant à courir;credit;0;extended
+80161;Crédit-bail mobilier;credit;0;extended
+80165;Crédit-bail immobilier;credit;0;extended
+8018;Autres engagements donnés;credit;0;extended
+802;Engagements reçus par l’entité;credit;0;short
+8021;Avals, cautions, garanties;credit;0;extended
+8024;Créances escomptées non échues;credit;0;extended
+8026;Engagements reçus pour utilisation en crédit-bail;credit;0;extended
+80261;Crédit-bail mobilier;credit;0;extended
+80265;Crédit-bail immobilier;credit;0;extended
+8028;Autres engagements reçus;credit;0;extended
+809;Contrepartie des engagements;credit;0;short
+8091;Contrepartie 801;credit;0;extended
+8092;Contrepartie 802;credit;0;extended
+86;Emplois des contributions volontaires en nature;credit;0;base
+860;Secours en nature (alimentaire, vestimentaire, …);credit;0;base
+861;Mise à disposition gratuite de bien (locaux, matériels, …);credit;0;base
+862;Prestations;credit;0;base
+864;Personnel bénévole;credit;0;base
+87;Contributions volontaires en nature;credit;0;base
+870;Bénévolat;credit;0;base
+871;Prestations en nature;credit;0;base
+875;Dons en nature;credit;0;base
+88;Résultat en instance d’affectation;credit;0;base
+89;Bilan;credit;0;base
+890;Bilan d’ouverture;credit;0;extended
+891;Bilan de clôture;credit;0;extended

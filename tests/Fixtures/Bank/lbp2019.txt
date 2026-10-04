@@ -1,0 +1,23 @@
+Relevé de votre CCP - n° 5
+> Arrêté mensuel du 1 au 31 décembre 2018
+Nouveau solde au 31/12/2018
++ 2 337,10 ¤
+Vos opérations
+Date
+Opération
+Débit (¤)
+100,00
+Ancien solde au 30/11/2018
+14/12
+Crédit (¤)
+VIREMENT DE CLIENT A
+2 535,00
+REFERENCE : 1
+20/12
+PRELEVEMENT ASSURANCE
+45,90
+CONTRAT 99
+21/12
+VIREMENT POUR FOURNISSEUR B
+252,00
+Total des opérations

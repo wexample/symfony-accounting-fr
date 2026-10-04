@@ -1,0 +1,1006 @@
+number;label;nature;lettrable;level
+1;Comptes de capitaux;credit;0;short
+10;Capital et réserves;credit;0;base
+101;Capital;credit;0;short
+1011;Capital souscrit – non appelé;credit;0;extended
+1012;Capital souscrit – appelé, non versé;credit;0;extended
+1013;Capital souscrit – appelé, versé;credit;0;extended
+10131;Capital non amorti;credit;0;extended
+10132;Capital amorti;credit;0;extended
+1018;Capital souscrit soumis à des réglementations particulières;credit;0;extended
+102;Fonds fiduciaires;credit;0;base
+104;Primes liées au capital social;credit;0;base
+1041;Primes d’émission;credit;0;extended
+1042;Primes de fusion;credit;0;extended
+1043;Primes d’apport;credit;0;extended
+1044;Primes de conversion d’obligations en actions;credit;0;extended
+1045;Bons de souscription d’actions;credit;0;extended
+105;Écarts de réévaluation;credit;0;short
+1051;Réserve spéciale de réévaluation;credit;0;extended
+1052;Écart de réévaluation libre;credit;0;extended
+1053;Réserve de réévaluation;credit;0;extended
+1055;Écarts de réévaluation (autres opérations légales);credit;0;extended
+1057;Autres écarts de réévaluation en France;credit;0;extended
+1058;Autres écarts de réévaluation à l’Étranger;credit;0;extended
+106;Réserves;credit;0;base
+1061;Réserve légale;credit;0;short
+10611;Réserve légale proprement dite;credit;0;extended
+10612;Plus-values nettes à long terme;credit;0;extended
+1062;Réserves indisponibles;credit;0;base
+1063;Réserves statutaires ou contractuelles;credit;0;short
+1064;Réserves réglementées;credit;0;short
+10641;Plus-values nettes à long terme;credit;0;extended
+10643;Réserves consécutives à l’octroi de subventions d’investissement;credit;0;extended
+10648;Autres réserves réglementées;credit;0;extended
+1068;Autres réserves;credit;0;short
+10681;Réserve de propre assureur;credit;0;extended
+10688;Réserves diverses;credit;0;extended
+107;Écart d’équivalence;credit;0;base
+108;Compte de l’exploitant;credit;0;short
+109;Actionnaires : Capital souscrit – non appelé;credit;0;base
+11;Report à nouveau (solde créditeur ou débiteur);credit;0;base
+110;Report à nouveau (solde créditeur);credit;0;extended
+119;Report à nouveau (solde débiteur);credit;0;extended
+12;Résultat de l’exercice (bénéfice ou perte);credit;0;short
+120;Résultat de l’exercice (bénéfice);credit;0;extended
+129;Résultat de l’exercice (perte);credit;0;extended
+13;Subventions d’investissement;credit;0;base
+131;Subventions d’équipement;credit;0;base
+1311;État;credit;0;extended
+1312;Régions;credit;0;extended
+1313;Départements;credit;0;extended
+1314;Communes;credit;0;extended
+1315;Collectivités publiques;credit;0;extended
+1316;Entreprises publiques;credit;0;extended
+1317;Entreprises et organismes privés;credit;0;extended
+1318;Autres;credit;0;extended
+138;Autres subventions d’investissement (même ventilation que celle du compte 131);credit;0;base
+139;Subventions d’investissement inscrites au compte de résultat;credit;0;base
+1391;Subventions d’équipement;credit;0;base
+13911;État;credit;0;extended
+13912;Régions;credit;0;extended
+13913;Départements;credit;0;extended
+13914;Communes;credit;0;extended
+13915;Collectivités publiques;credit;0;extended
+13916;Entreprises publiques;credit;0;extended
+13917;Entreprises et organismes privés;credit;0;extended
+13918;Autres;credit;0;extended
+1398;Autres subventions d’investissement (même ventilation que celle du compte 1391);credit;0;base
+14;Provisions réglementées;credit;0;base
+142;Provisions réglementées relatives aux immobilisations;credit;0;base
+1423;Provisions pour reconstitution des gisements miniers et pétroliers;credit;0;extended
+1424;Provisions pour investissement (participation des salariés);credit;0;extended
+143;Provisions réglementées relatives aux stocks;credit;0;base
+1431;Hausse des prix;credit;0;extended
+1432;Fluctuation des cours;credit;0;extended
+144;Provisions réglementées relatives aux autres éléments de l’actif;credit;0;base
+145;Amortissements dérogatoires;credit;0;short
+146;Provision spéciale de réévaluation;credit;0;short
+147;Plus-values réinvesties;credit;0;short
+148;Autres provisions réglementées;credit;0;short
+15;Provisions;credit;0;short
+151;Provisions pour risques;credit;0;base
+1511;Provisions pour litiges;credit;0;extended
+1512;Provisions pour garanties données aux clients;credit;0;extended
+1513;Provisions pour pertes sur marchés à terme;credit;0;extended
+1514;Provisions pour amendes et pénalités;credit;0;extended
+1515;Provisions pour pertes de change;credit;0;extended
+1516;Provisions pour pertes sur contrats;credit;0;extended
+1518;Autres provisions pour risques;credit;0;extended
+153;Provisions pour pensions et obligations similaires;credit;0;base
+154;Provisions pour restructurations;credit;0;base
+155;Provisions pour impôts;credit;0;base
+156;Provisions pour renouvellement des immobilisations (entreprises concessionnaires);credit;0;base
+157;Provisions pour charges à répartir sur plusieurs exercices;credit;0;base
+1572;Provisions pour gros entretien ou grandes révisions;credit;0;extended
+158;Autres provisions pour charges;credit;0;base
+1581;Provisions pour remises en état;credit;0;extended
+16;Emprunts et dettes assimilées;credit;0;short
+161;Emprunts obligataires convertibles;credit;0;base
+162;Obligations représentatives de passifs nets remis en fiducie;credit;0;base
+163;Autres emprunts obligataires;credit;0;base
+164;Emprunts auprès des établissements de crédit;credit;0;base
+165;Dépôts et cautionnements reçus;credit;0;base
+1651;Dépôts;credit;0;extended
+1655;Cautionnements;credit;0;extended
+166;Participation des salariés aux résultats;credit;0;extended
+1661;Comptes bloqués;credit;0;extended
+1662;Fonds de participation;credit;0;extended
+167;Emprunts et dettes assortis de conditions particulières;credit;0;base
+1671;Émissions de titres participatifs;credit;0;base
+1674;Avances conditionnées de l’État;credit;0;base
+1675;Emprunts participatifs;credit;0;base
+168;Autres emprunts et dettes assimilées;credit;0;base
+1681;Autres emprunts;credit;0;extended
+1685;Rentes viagères capitalisées;credit;0;extended
+1687;Autres dettes;credit;0;extended
+1688;Intérêts courus;credit;0;extended
+16881;sur emprunts obligataires convertibles;credit;0;extended
+16883;sur autres emprunts obligataires;credit;0;extended
+16884;sur emprunts auprès des établissements de crédit;credit;0;extended
+16885;sur dépôts et cautionnements reçus;credit;0;extended
+16886;sur participation des salariés aux résultats;credit;0;extended
+16887;sur emprunts et dettes assortis de conditions particulières;credit;0;extended
+16888;sur autres emprunts et dettes assimilées;credit;0;extended
+169;Primes de remboursement des obligations;credit;0;base
+17;Dettes rattachées à des participations;credit;0;base
+171;Dettes rattachées à des participations (groupe);credit;0;base
+174;Dettes rattachées à des participations (hors groupe);credit;0;base
+178;Dettes rattachées à des sociétés en participation;credit;0;base
+1781;Principal;credit;0;extended
+1788;Intérêts courus;credit;0;extended
+18;Comptes de liaison des établissements et sociétés en participation;credit;0;base
+181;Comptes de liaison des établissements;credit;0;extended
+186;Biens et prestations de services échangés entre établissements (charges);credit;0;extended
+187;Biens et prestations de services échangés entre établissements (produits);credit;0;extended
+188;Comptes de liaison des sociétés en participation;credit;0;extended
+2;Comptes d’immobilisations;debit;0;short
+20;Immobilisations incorporelles;debit;0;short
+201;Frais d’établissement;debit;0;short
+2011;Frais de constitution;debit;0;extended
+2012;Frais de premier établissement;debit;0;extended
+20121;Frais de prospection;debit;0;extended
+20122;Frais de publicité;debit;0;extended
+2013;Frais d’augmentation de capital et d’opérations diverses (fusions, scissions, transformations);debit;0;extended
+203;Frais de recherche et de développement;debit;0;base
+205;Concessions et droits similaires, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires;debit;0;base
+206;Droit au bail;debit;0;short
+207;Fonds commercial;debit;0;short
+208;Autres immobilisations incorporelles;debit;0;short
+2081;Mali de fusion sur actifs incorporels;debit;0;base
+21;Immobilisations corporelles;debit;0;short
+211;Terrains;debit;0;base
+2111;Terrains nus;debit;0;base
+2112;Terrains aménagés;debit;0;base
+2113;Sous-sols et sursols;debit;0;base
+2114;Terrains de carrières (Tréfonds);debit;0;base
+2115;Terrains bâtis;debit;0;base
+21151;Ensembles immobiliers industriels (A, B);debit;0;extended
+21155;Ensembles immobiliers administratifs et commerciaux (A, B);debit;0;extended
+21158;Autres ensembles immobiliers;debit;0;extended
+211581;affectés aux opérations professionnelles (A, B);debit;0;extended
+211588;affectés aux opérations non professionnelles (A, B);debit;0;extended
+2116;Compte d’ordre sur immobilisations;debit;0;base
+212;Agencements et aménagements de terrains (même ventilation que celle du compte 211);debit;0;base
+213;Constructions;debit;0;base
+2131;Bâtiments;debit;0;base
+21311;Ensembles immobiliers industriels (A, B);debit;0;extended
+21315;Ensembles immobiliers administratifs et commerciaux (A, B);debit;0;extended
+21318;Autres ensembles immobiliers;debit;0;extended
+213181;affectés aux opérations professionnelles (A, B);debit;0;extended
+213188;affectés aux opérations non professionnelles (A, B);debit;0;extended
+2135;Installations générales – agencements – aménagements des constructions;debit;0;base
+21351;Ensembles immobiliers industriels (A, B);debit;0;extended
+21355;Ensembles immobiliers administratifs et commerciaux (A, B);debit;0;extended
+21358;Autres ensembles immobiliers;debit;0;extended
+213581;affectés aux opérations professionnelles (A, B);debit;0;extended
+213588;affectés aux opérations non professionnelles (A, B);debit;0;extended
+2138;Ouvrages d’infrastructure;debit;0;base
+21381;Voies de terre;debit;0;extended
+21382;Voies de fer;debit;0;extended
+21383;Voies d’eau;debit;0;extended
+21384;Barrages;debit;0;extended
+21385;Pistes d’aérodromes;debit;0;extended
+214;Constructions sur sol d’autrui (même ventilation que celle du compte 213);debit;0;base
+215;Installations techniques, matériels et outillage industriels;debit;0;base
+2151;Installations complexes spécialisées;debit;0;base
+21511;sur sol propre;debit;0;extended
+21514;sur sol d’autrui;debit;0;extended
+2153;Installations à caractère spécifique;debit;0;base
+21531;sur sol propre;debit;0;extended
+21534;sur sol d’autrui;debit;0;extended
+2154;Matériel industriel;debit;0;base
+2155;Outillage industriel;debit;0;base
+2157;Agencements et aménagements du matériel et outillage industriels;debit;0;base
+218;Autres immobilisations corporelles;debit;0;base
+2181;Installations générales, agencements, aménagements divers;debit;0;base
+2182;Matériel de transport;debit;0;base
+2183;Matériel de bureau et matériel informatique;debit;0;base
+2184;Mobilier;debit;0;base
+2185;Cheptel;debit;0;base
+2186;Emballages récupérables;debit;0;base
+2187;Mali de fusions sur actifs corporels;debit;0;base
+22;Immobilisations mises en concession;debit;0;base
+23;Immobilisations en cours;debit;0;short
+231;Immobilisations corporelles en cours;debit;0;base
+2312;Terrains;debit;0;extended
+2313;Constructions;debit;0;extended
+2315;Installations techniques, matériel et outillage industriels;debit;0;extended
+2318;Autres immobilisations corporelles;debit;0;extended
+232;Immobilisations incorporelles en cours;debit;0;base
+237;Avances et acomptes versés sur immobilisations incorporelles;debit;0;base
+238;Avances et acomptes versés sur commandes d’immobilisations corporelles;debit;0;base
+2382;Terrains;debit;0;extended
+2383;Constructions;debit;0;extended
+2385;Installations techniques, matériel et outillage industriels;debit;0;extended
+2388;Autres immobilisations corporelles;debit;0;base
+25;Parts dans des entreprises liées et créances sur des entreprises liées;debit;0;base
+26;Participations et créances rattachées à des participations;debit;0;base
+261;Titres de participation;debit;0;base
+2611;Actions;debit;0;extended
+2618;Autres titres;debit;0;extended
+266;Autres formes de participation;debit;0;base
+2661;Droits représentatifs d’actifs nets remis en fiducie;debit;0;extended
+267;Créances rattachées à des participations;debit;0;base
+2671;Créances rattachées à des participations (groupe);debit;0;extended
+2674;Créances rattachées à des participations (hors groupe);debit;0;extended
+2675;Versements représentatifs d’apports non capitalisés (appel de fonds);debit;0;extended
+2676;Avances consolidables;debit;0;extended
+2677;Autres créances rattachées à des participations;debit;0;extended
+2678;Intérêts courus;debit;0;extended
+268;Créances rattachées à des sociétés en participation;debit;0;base
+2681;Principal;debit;0;extended
+2688;Intérêts courus;debit;0;extended
+269;Versements restant à effectuer sur titres de participation non libérés;debit;0;base
+27;Autres immobilisations financières;debit;0;short
+271;Titres immobilisés autres que les titres immobilisés de l’activité de portefeuille (droit de propriété);debit;0;base
+2711;Actions;debit;0;extended
+2718;Autres titres;debit;0;extended
+272;Titres immobilisés (droit de créance);debit;0;base
+2721;Obligations;debit;0;extended
+2722;Bons;debit;0;extended
+273;Titres immobilisés de l’activité de portefeuille;debit;0;base
+274;Prêts;debit;0;base
+2741;Prêts participatifs;debit;0;extended
+2742;Prêts aux associés;debit;0;extended
+2743;Prêts au personnel;debit;0;extended
+2748;Autres prêts;debit;0;extended
+275;Dépôts et cautionnements versés;debit;0;base
+2751;Dépôts;debit;0;extended
+2755;Cautionnements;debit;0;extended
+276;Autres créances immobilisées;debit;0;base
+2761;Créances diverses;debit;0;extended
+2768;Intérêts courus;debit;0;extended
+27682;sur titres immobilisés (droit de créance);debit;0;extended
+27684;sur prêts;debit;0;extended
+27685;sur dépôts et cautionnements;debit;0;extended
+27688;sur créances diverses;debit;0;extended
+277;(Actions propres ou parts propres);debit;0;base
+2771;Actions propres ou parts propres;debit;0;extended
+2772;Actions propres ou parts propres en voie d’annulation;debit;0;extended
+278;Mali de fusion sur actifs financiers;debit;0;base
+279;Versements restant à effectuer sur titres immobilisés non libérés;debit;0;base
+28;Amortissements des immobilisations;debit;0;base
+280;Amortissements des immobilisations incorporelles;debit;0;short
+2801;Frais d’établissement (même ventilation que celle du compte 201);debit;0;base
+2803;Frais de recherche et de développement;debit;0;base
+2805;Concessions et droits similaires, brevets, licences, logiciels, droits et valeurs similaires;debit;0;base
+2807;Fonds commercial;debit;0;base
+2808;Autres immobilisations incorporelles;debit;0;base
+28081;Amortissements du mali de fusion sur actifs incorporels;debit;0;base
+281;Amortissements des immobilisations corporelles;debit;0;short
+2812;Agencements, aménagements de terrains (même ventilation que celle du compte 212);debit;0;base
+2813;Constructions (même ventilation que celle du compte 213);debit;0;base
+2814;Constructions sur sol d’autrui (même ventilation que celle du compte 214);debit;0;base
+2815;Installations, matériel et outillage industriels (même ventilation que celle du compte 215);debit;0;base
+2818;Autres immobilisations corporelles (même ventilation que celle du compte 218);debit;0;base
+28187;Amortissement du mali de fusion sur actifs corporels;debit;0;base
+282;Amortissements des immobilisations mises en concession;debit;0;base
+29;Dépréciations des immobilisations;debit;0;base
+290;Dépréciations des immobilisations incorporelles;debit;0;short
+2905;Marques, procédés, droits et valeurs similaires;debit;0;base
+2906;Droit au bail;debit;0;base
+2907;Fonds commercial;debit;0;base
+2908;Autres immobilisations incorporelles;debit;0;base
+29081;Dépréciation du mali de fusion sur actifs incorporels;debit;0;base
+291;Dépréciations des immobilisations corporelles (même ventilation que celle du compte 21);debit;0;short
+29187;Dépréciation du mali de fusion sur actifs corporels;debit;0;base
+292;Dépréciations des immobilisations mises en concession;debit;0;base
+293;Dépréciations des immobilisations en cours;debit;0;base
+2931;Immobilisations corporelles en cours;debit;0;base
+2932;Immobilisations incorporelles en cours;debit;0;base
+296;Dépréciations des participations et créances rattachées à des participations;debit;0;base
+2961;Titres de participation;debit;0;base
+2966;Autres formes de participation;debit;0;base
+2967;Créances rattachées à des participations (même ventilation que celle du compte 267);debit;0;base
+2968;Créances rattachées à des sociétés en participation (même ventilation que celle du compte 268);debit;0;base
+297;Dépréciations des autres immobilisations financières;debit;0;short
+2971;Titres immobilisés autres que les titres immobilisés de l’activité de portefeuille – droit de propriété (même ventilation que celle du compte 271);debit;0;base
+2972;Droit de créance (même ventilation que celle du compte 272);debit;0;base
+2973;Titres immobilisés de l’activité de portefeuille;debit;0;base
+2974;Prêts (même ventilation que celle du compte 274);debit;0;base
+2975;Dépôts et cautionnements versés (même ventilation que celle du compte 275);debit;0;base
+2976;Autres créances immobilisées (même ventilation que celle du compte 276);debit;0;base
+29787;Dépréciation du mali de fusion sur actifs financiers;debit;0;base
+3;Comptes de stocks et en-cours;debit;0;short
+31;Matières premières (et fournitures);debit;0;short
+311;Matières (ou groupe) A;debit;0;base
+312;Matières (ou groupe) B;debit;0;base
+317;Fournitures A, B, C,;debit;0;base
+32;Autres approvisionnements;debit;0;short
+321;Matières consommables;debit;0;base
+3211;Matières (ou groupe) C;debit;0;extended
+3212;Matières (ou groupe) D;debit;0;extended
+322;Fournitures consommables;debit;0;base
+3221;Combustibles;debit;0;extended
+3222;Produits d’entretien;debit;0;extended
+3223;Fournitures d’atelier et d’usine;debit;0;extended
+3224;Fournitures de magasin;debit;0;extended
+3225;Fournitures de bureau;debit;0;extended
+326;Emballages;debit;0;base
+3261;Emballages perdus;debit;0;extended
+3265;Emballages récupérables non identifiables;debit;0;extended
+3267;Emballages à usage mixte;debit;0;extended
+33;En-cours de production de biens;debit;0;short
+331;Produits en cours;debit;0;base
+3311;Produits en cours P 1;debit;0;extended
+3312;Produits en cours P 2;debit;0;extended
+335;Travaux en cours;debit;0;base
+3351;Travaux en cours T 1;debit;0;extended
+3352;Travaux en cours T 2;debit;0;extended
+34;En-cours de production de services;debit;0;short
+341;Études en cours;debit;0;base
+3411;Études en cours E 1;debit;0;extended
+3412;Études en cours E 2;debit;0;extended
+345;Prestations de services en cours;debit;0;base
+3451;Prestations de services S 1;debit;0;extended
+3452;Prestations de services S 2;debit;0;extended
+35;Stocks de produits;debit;0;short
+351;Produits intermédiaires;debit;0;base
+3511;Produits intermédiaires (ou groupe) A;debit;0;extended
+3512;Produits intermédiaires (ou groupe) B;debit;0;extended
+355;Produits finis;debit;0;base
+3551;Produits finis (ou groupe) A;debit;0;extended
+3552;Produits finis (ou groupe) B;debit;0;extended
+358;Produits résiduels (ou matières de récupération);debit;0;base
+3581;Déchets;debit;0;extended
+3585;Rebuts;debit;0;extended
+3586;Matières de récupération;debit;0;extended
+37;Stocks de marchandises;debit;0;short
+371;Marchandises (ou groupe) A;debit;0;extended
+372;Marchandises (ou groupe) B;debit;0;extended
+38;(lorsque l’entité tient un inventaire permanent en comptabilité générale, le compte 38 peut être utilisé pour comptabiliser les stocks en voie d’acheminement, mis en dépôt ou donnés en consignation);debit;0;base
+39;Dépréciations des stocks et en-cours;debit;0;base
+391;Dépréciations des matières premières (et fournitures);debit;0;short
+3911;Matières (ou groupe) A;debit;0;extended
+3912;Matières (ou groupe) B;debit;0;extended
+3917;Fournitures A, B, C,;debit;0;extended
+392;Dépréciations des autres approvisionnements;debit;0;short
+3921;Matières consommables (même ventilation que celle du compte 321);debit;0;extended
+3922;Fournitures consommables (même ventilation que celle du compte 322);debit;0;extended
+3926;Emballages (même ventilation que celle du compte 326);debit;0;extended
+393;Dépréciations des en-cours de production de biens;debit;0;short
+3931;Produits en cours (même ventilation que celle du compte 331);debit;0;extended
+3935;Travaux en cours (même ventilation que celle du compte 335);debit;0;extended
+394;Dépréciations des en-cours de production de services;debit;0;short
+3941;Études en cours (même ventilation que celle du compte 341);debit;0;extended
+3945;Prestations de services en cours (même ventilation que celle du compte 345);debit;0;extended
+395;Dépréciations des stocks de produits;debit;0;short
+3951;Produits intermédiaires (même ventilation que celle du compte 351);debit;0;extended
+3955;Produits finis (même ventilation que celle du compte 355);debit;0;extended
+397;Dépréciations des stocks de marchandises;debit;0;short
+3971;Marchandise (ou groupe) A;debit;0;extended
+3972;Marchandise (ou groupe) B;debit;0;extended
+4;Comptes de tiers;debit;0;short
+40;Fournisseurs et comptes rattachés;credit;0;base
+400;Fournisseurs et comptes rattachés;credit;1;short
+401;Fournisseurs;credit;1;base
+4011;Fournisseurs – Achats de biens et prestations de services;credit;1;extended
+4017;Fournisseurs – Retenues de garantie;credit;1;extended
+403;Fournisseurs – Effets à payer;credit;1;base
+404;Fournisseurs d’immobilisations;credit;1;base
+4041;Fournisseurs – Achats d’immobilisations;credit;1;extended
+4047;Fournisseurs d’immobilisations – Retenues de garantie;credit;1;extended
+405;Fournisseurs d’immobilisations – Effets à payer;credit;1;base
+408;Fournisseurs – Factures non parvenues;credit;1;base
+4081;Fournisseurs;credit;1;extended
+4084;Fournisseurs d’immobilisations;credit;1;extended
+4088;Fournisseurs – Intérêts courus;credit;1;extended
+409;Fournisseurs débiteurs;credit;1;short
+4091;Fournisseurs – Avances et acomptes versés sur commandes;credit;1;base
+4096;Fournisseurs – Créances pour emballages et matériel à rendre;credit;1;base
+4097;Fournisseurs – Autres avoirs;credit;1;base
+40971;Fournisseurs d’exploitation;credit;1;extended
+40974;Fournisseurs d’immobilisations;credit;1;extended
+4098;Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus;debit;1;base
+41;Clients et comptes rattachés;debit;0;base
+410;Clients et comptes rattachés;debit;1;short
+411;Clients;debit;1;base
+4111;Clients – Ventes de biens ou de prestations de services;debit;1;extended
+4117;Clients – Retenues de garantie;debit;1;extended
+413;Clients – Effets à recevoir;debit;1;base
+416;Clients douteux ou litigieux;debit;1;base
+418;Clients – Produits non encore facturés;debit;1;base
+4181;Clients – Factures à établir;debit;1;extended
+4188;Clients – Intérêts courus;debit;1;extended
+419;Clients créditeurs;debit;1;short
+4191;Clients – Avances et acomptes reçus sur commandes;debit;1;base
+4196;Clients – Dettes sur emballages et matériels consignés;debit;1;base
+4197;Clients – Autres avoirs;debit;1;base
+4198;Rabais, remises, ristournes à accorder et autres avoirs à établir;debit;1;base
+42;Personnel et comptes rattachés;credit;0;base
+421;Personnel – Rémunérations dues;credit;0;short
+422;Comités d’entreprises, d’établissement, …;credit;0;base
+424;Participation des salariés aux résultats;credit;0;base
+4246;Réserve spéciale;credit;0;extended
+4248;Comptes courants;credit;0;extended
+425;Personnel – Avances et acomptes;credit;0;base
+426;Personnel – Dépôts;credit;0;base
+427;Personnel – Oppositions;credit;0;base
+428;Personnel – Charges à payer et produits à recevoir;credit;0;short
+4282;Dettes provisionnées pour congés à payer;credit;0;extended
+4284;Dettes provisionnées pour participation des salariés aux résultats;credit;0;extended
+4286;Autres charges à payer;credit;0;extended
+4287;Produits à recevoir;credit;0;extended
+43;Sécurité sociale et autres organismes sociaux;credit;0;short
+431;Sécurité sociale;credit;0;base
+437;Autres organismes sociaux;credit;0;base
+438;Organismes sociaux – Charges à payer et produits à recevoir;credit;0;base
+4382;Charges sociales sur congés à payer;credit;0;extended
+4386;Autres charges à payer;credit;0;extended
+4387;Produits à recevoir;credit;0;extended
+44;État et autres collectivités publiques;credit;0;base
+441;État – Subventions à recevoir;credit;0;base
+4411;Subventions d’investissement;credit;0;extended
+4417;Subventions d’exploitation;credit;0;extended
+4418;Subventions d’équilibre;credit;0;extended
+4419;Avances sur subventions;credit;0;extended
+442;État – Impôts et taxes recouvrables sur des tiers;credit;0;base
+4424;Obligataires;credit;0;extended
+4425;Associés;credit;0;extended
+443;Opérations particulières avec l’État les collectivités publiques, les organismes internationaux;credit;0;base
+4431;Créances sur l’État résultant de la suppression de la règle du décalage d’un mois en matière de TVA;credit;0;base
+4438;Intérêts courus sur créances figurant au 4431;credit;0;base
+444;État – Impôts sur les bénéfices;credit;0;short
+445;État – Taxes sur le chiffre d’affaires;credit;0;short
+4452;TVA due intracommunautaire;credit;0;base
+4455;Taxes sur le chiffre d’affaires à décaisser;credit;0;base
+44551;TVA à décaisser;credit;0;extended
+44558;Taxes assimilées à la TVA;credit;0;extended
+4456;Taxes sur le chiffre d’affaires déductibles;debit;0;base
+44562;TVA sur immobilisations;debit;0;extended
+44563;TVA transférée par d’autres entreprises;debit;0;extended
+44566;TVA sur autres biens et services;debit;0;extended
+44567;Crédit de TVA à reporter;debit;0;extended
+44568;Taxes assimilées à la TVA;debit;0;extended
+4457;Taxes sur le chiffre d’affaires collectées par l’entreprise;credit;0;base
+44571;TVA collectée;credit;0;extended
+44578;Taxes assimilées à la TVA;credit;0;extended
+4458;Taxes sur le chiffre d’affaires à régulariser ou en attente;debit;0;base
+44581;Acomptes – Régime simplifié d’imposition;debit;0;extended
+44582;Acomptes – Régime de forfait;debit;0;extended
+44583;Remboursement de taxes sur le chiffre d’affaires demandé;debit;0;extended
+44584;TVA récupérée d’avance;debit;0;extended
+44586;Taxes sur le chiffre d’affaires sur factures non parvenues;debit;0;extended
+44587;Taxes sur le chiffre d’affaires sur factures à établir;debit;0;extended
+446;Obligations cautionnées;credit;0;base
+447;Autres impôts, taxes et versements assimilés;credit;0;short
+448;État – Charges à payer et produits à recevoir;credit;0;base
+4482;Charges fiscales sur congés à payer;credit;0;extended
+4486;Charges à payer;credit;0;extended
+4487;Produits à recevoir;credit;0;extended
+449;Quotas d’émission à acquérir;credit;0;base
+45;Groupe et associés;debit;0;short
+451;Groupe;debit;0;base
+455;Associés – Comptes courants;debit;0;short
+4551;Principal;debit;0;extended
+4558;Intérêts courus;debit;0;extended
+456;Associés – Opérations sur le capital;debit;0;base
+4561;Associés – Comptes d’apport en société;debit;0;extended
+45611;Apports en nature;debit;0;extended
+45615;Apports en numéraire;debit;0;extended
+4562;Apporteurs – Capital appelé, non versé;debit;0;extended
+45621;Actionnaires – Capital souscrit et appelé, non versé;debit;0;extended
+45625;Associés – Capital appelé, non versé;debit;0;extended
+4563;Associés – Versements reçus sur augmentation de capital;debit;0;extended
+4564;Associés – Versements anticipés;debit;0;extended
+4566;Actionnaires défaillants;debit;0;extended
+4567;Associés – Capital à rembourser;debit;0;extended
+457;Associés – Dividendes à payer;debit;0;base
+458;Associés – Opérations faites en commun et en GIE;debit;0;base
+4581;Opérations courantes;debit;0;extended
+4588;Intérêts courus;debit;0;extended
+46;Débiteurs divers et créditeurs divers;credit;0;short
+462;Créances sur cessions d’immobilisations;credit;0;extended
+464;Dettes sur acquisitions de valeurs mobilières de placement;credit;0;extended
+465;Créances sur cessions de valeurs mobilières de placement;credit;0;extended
+467;Autres comptes débiteurs ou créditeurs;credit;0;extended
+468;Divers – Charges à payer et produits à recevoir;credit;0;extended
+4686;Charges à payer;credit;0;extended
+4687;Produits à recevoir;debit;0;extended
+47;Comptes transitoires ou d’attente;debit;0;short
+471;Comptes d’attente;debit;0;base
+472;Comptes d’attente;debit;0;base
+473;Comptes d’attente;debit;0;base
+474;Comptes d’attente;debit;0;base
+475;Comptes d’attente;debit;0;base
+476;Différence de conversion – Actif;debit;0;base
+4761;Diminution des créances;debit;0;extended
+4762;Augmentation des dettes;debit;0;extended
+4768;Différences compensées par couverture de change;debit;0;extended
+477;Différences de conversion – Passif;credit;0;base
+4771;Augmentation des créances;both;0;extended
+4772;Diminution des dettes;debit;0;extended
+4778;Différences compensées par couverture de change;debit;0;extended
+478;Autres comptes transitoires;debit;0;base
+4786;Différences d’évaluation sur instruments de trésorerie – ACTIF;debit;0;base
+4787;Différences d’évaluation sur instruments de trésorerie – PASSIF;credit;0;base
+48;Comptes de régularisation;debit;0;base
+481;Charges à répartir sur plusieurs exercices;debit;0;short
+4816;Frais d’émission des emprunts;debit;0;extended
+486;Charges constatées d’avance;debit;0;short
+487;Produits constatés d’avance;debit;0;short
+488;Comptes de répartition périodique des charges et des produits;debit;0;base
+4886;Charges;debit;0;extended
+4887;Produits;debit;0;extended
+49;Dépréciations des comptes de tiers;debit;0;base
+491;Dépréciations des comptes de clients;debit;0;short
+495;Dépréciations des comptes du groupe et des associés;debit;0;base
+4951;Comptes du groupe;debit;0;base
+4955;Comptes courants des associés;debit;0;base
+4958;Opérations faites en commun et en GIE;debit;0;base
+496;Dépréciations des comptes de débiteurs divers;debit;0;short
+4962;Créances sur cessions d’immobilisations;debit;0;extended
+4965;Créances sur cessions de valeurs mobilières de placement;debit;0;extended
+4967;Autres comptes débiteurs;debit;0;extended
+5;Comptes financiers;debit;0;short
+50;Valeurs mobilières de placement;debit;0;short
+501;Parts dans des entreprises liées;debit;0;base
+502;Actions propres;debit;0;base
+5021;Actions destinées à être attribuées aux employés et affectées à des plans déterminés;debit;0;extended
+5022;Actions disponibles pour être attribuées aux employés ou pour la régularisation des cours de bourse;debit;0;extended
+503;Actions;debit;0;base
+5031;Titres cotés;debit;0;extended
+5035;Titres non cotés;debit;0;extended
+504;Autres titres conférant un droit de propriété;debit;0;base
+505;Obligations et bons émis par la société et rachetés par elle;debit;0;base
+506;Obligations;debit;0;base
+5061;Titres cotés;debit;0;extended
+5065;Titres non cotés;debit;0;extended
+507;Bons du Trésor et bons de caisse à court terme;debit;0;base
+508;Autres valeurs mobilières de placement et autres créances assimilées;debit;0;base
+5081;Autres valeurs mobilières;debit;0;extended
+5082;Bons de souscription;debit;0;extended
+5088;Intérêts courus sur obligations, bons et valeurs assimilés;debit;0;extended
+509;Versements restant à effectuer sur valeurs mobilières de placement non libérées;debit;0;base
+51;Banques, établissements financiers et assimilés;debit;0;short
+511;Valeurs à l’encaissement;debit;0;base
+5111;Coupons échus à l’encaissement;debit;0;extended
+5112;Chèques à encaisser;debit;0;extended
+5113;Effets à l’encaissement;debit;0;extended
+5114;Effets à l’escompte;debit;0;extended
+512;Banques;debit;0;base
+5121;Comptes en monnaie nationale;debit;0;extended
+5124;Comptes en devises;debit;0;extended
+514;Chèques postaux;debit;0;base
+515; Caisses  du Trésor et des établissements publics;debit;0;base
+516;Sociétés de bourse;debit;0;base
+517;Autres organismes financiers;debit;0;base
+518;Intérêts courus;debit;0;base
+5181;Intérêts courus à payer;debit;0;extended
+5188;Intérêts courus à recevoir;debit;0;extended
+519;Concours bancaires courants;debit;0;base
+5191;Crédit de mobilisation de créances commerciales;debit;0;extended
+5193;Mobilisation de créances nées à l’étranger;debit;0;extended
+5198;Intérêts courus sur concours bancaires courants;debit;0;extended
+52;Instruments de trésorerie;debit;0;base
+53;Caisse;debit;0;short
+531;Caisse siège social;debit;0;base
+5311;Caisse en monnaie nationale;debit;0;extended
+5314;Caisse en devises;debit;0;extended
+532;Caisse succursale (ou usine) A;debit;0;extended
+533;Caisse succursale (ou usine) B;debit;0;extended
+54;Régies d’avance et accréditifs;debit;0;short
+58;Virements internes;debit;0;short
+59;Dépréciations des comptes financiers;debit;0;base
+590;Dépréciations des valeurs mobilières de placement;debit;0;short
+5903;Actions;debit;0;base
+5904;Autres titres conférant un droit de propriété;debit;0;base
+5906;Obligations;debit;0;base
+5908;Autres valeurs mobilières de placement et créances assimilées;debit;0;base
+6;Comptes de charges;debit;0;short
+60;Achats (sauf 603);debit;0;short
+601;Achats stockés – Matières premières (et fournitures);debit;0;base
+6011;Matières (ou groupe) A;debit;0;extended
+6012;Matières (ou groupe) B;debit;0;extended
+6017;Fournitures A, B, C,;debit;0;extended
+602;Achats stockés – Autres approvisionnements;debit;0;base
+6021;Matières consommables;debit;0;base
+60211;Matières (ou groupe) C;debit;0;extended
+60212;Matières (ou groupe) D;debit;0;extended
+6022;Fournitures consommables;debit;0;base
+60221;Combustibles;debit;0;extended
+60222;Produits d’entretien;debit;0;extended
+60223;Fournitures d’atelier et d’usine;debit;0;extended
+60224;Fournitures de magasin;debit;0;extended
+60225;Fourniture de bureau;debit;0;extended
+6026;Emballages;debit;0;base
+60261;Emballages perdus;debit;0;extended
+60265;Emballages récupérables non identifiables;debit;0;extended
+60267;Emballages à usage mixte;debit;0;extended
+604;Achats d’études et prestations de services;debit;0;base
+605;Achats de matériel, équipements et travaux;debit;0;base
+606;Achats non stockés de matière et fournitures;debit;0;base
+6061;Fournitures non stockables (eau, énergie, …);debit;0;extended
+6063;Fournitures d’entretien et de petit équipement;debit;0;extended
+6064;Fournitures administratives;debit;0;extended
+6068;Autres matières et fournitures;debit;0;extended
+607;Achats de marchandises;debit;0;base
+6071;Marchandise (ou groupe) A;debit;0;extended
+6072;Marchandise (ou groupe) B;debit;0;extended
+608;(Compte réservé, le cas échéant, à la récapitulation des frais accessoires incorporés aux achats);debit;0;base
+609;Rabais, remises et ristournes obtenus sur achats;debit;0;base
+6091;de matières premières (et fournitures);debit;0;extended
+6092;d’autres approvisionnements stockés;debit;0;extended
+6094;d’études et prestations de services;debit;0;extended
+6095;de matériel, équipements et travaux;debit;0;extended
+6096;d’approvisionnements non stockés;debit;0;extended
+6097;de marchandises;debit;0;extended
+6098;Rabais, remises et ristournes non affectés;debit;0;extended
+603;Variations des stocks (approvisionnements et marchandises);debit;0;short
+6031;Variation des stocks de matières premières (et fournitures);debit;0;base
+6032;Variation des stocks des autres approvisionnements;debit;0;base
+6037;Variation des stocks de marchandises 61/62 – Autres charges externes;debit;0;base
+61;Services extérieurs;debit;0;short
+611;Sous-traitance générale;debit;0;base
+612;Redevances de crédit-bail;debit;0;base
+6122;Crédit-bail mobilier;debit;0;base
+6125;Crédit-bail immobilier;debit;0;base
+613;Locations;debit;0;base
+6132;Locations immobilières;debit;0;extended
+6135;Locations mobilières;debit;0;extended
+6136;Malis sur emballages;debit;0;extended
+614;Charges locatives et de copropriété;debit;0;base
+615;Entretien et réparations;debit;0;base
+6152;sur biens immobiliers;debit;0;extended
+6155;sur biens mobiliers;debit;0;extended
+6156;Maintenance;debit;0;extended
+616;Primes d’assurances;debit;0;base
+6161;Multirisques;debit;0;extended
+6162;Assurance obligatoire dommage construction;debit;0;extended
+6163;Assurance – transport;debit;0;extended
+61636;sur achats;debit;0;extended
+61637;sur ventes;debit;0;extended
+61638;sur autres biens;debit;0;extended
+6164;Risques d’exploitation;debit;0;extended
+6165;Insolvabilité clients;debit;0;extended
+617;Études et recherches;debit;0;base
+618;Divers;debit;0;base
+6181;Documentation générale;debit;0;extended
+6183;Documentation technique;debit;0;extended
+6185;Frais de colloques, séminaires, conférences;debit;0;extended
+619;Rabais, remises et ristournes obtenus sur services extérieurs;debit;0;base
+62;Autres services extérieurs;debit;0;short
+621;Personnel extérieur à l’entreprise;debit;0;base
+6211;Personnel intérimaire;debit;0;extended
+6214;Personnel détaché ou prêté à l’entreprise;debit;0;extended
+622;Rémunérations d’intermédiaires et honoraires;debit;0;base
+6221;Commissions et courtages sur achats;debit;0;extended
+6222;Commissions et courtages sur ventes;debit;0;extended
+6224;Rémunérations des transitaires;debit;0;extended
+6225;Rémunérations d’affacturage;debit;0;extended
+6226;Honoraires;debit;0;extended
+6227;Frais d’actes et de contentieux;debit;0;extended
+6228;Divers;debit;0;extended
+623;Publicité, publications, relations publiques;debit;0;base
+6231;Annonces et insertions;debit;0;extended
+6232;Échantillons;debit;0;extended
+6233;Foires et expositions;debit;0;extended
+6234;Cadeaux à la clientèle;debit;0;extended
+6235;Primes;debit;0;extended
+6236;Catalogues et imprimés;debit;0;extended
+6237;Publications;debit;0;extended
+6238;Divers (pourboires, dons courants, …);debit;0;extended
+624;Transports de biens et transports collectifs du personnel;debit;0;base
+6241;Transports sur achats;debit;0;extended
+6242;Transports sur ventes;debit;0;extended
+6243;Transports entre établissements ou chantiers;debit;0;extended
+6244;Transports administratifs;debit;0;extended
+6247;Transports collectifs du personnel;debit;0;extended
+6248;Divers;debit;0;extended
+625;Déplacements, missions et réceptions;debit;0;base
+6251;Voyages et déplacements;debit;0;extended
+6255;Frais de déménagement;debit;0;extended
+6256;Missions;debit;0;extended
+6257;Réceptions;debit;0;extended
+626;Frais postaux et de télécommunications;debit;0;base
+627;Services bancaires et assimilés;debit;0;base
+6271;Frais sur titres (achat, vente, garde);debit;0;extended
+6272;Commissions et frais sur émission d’emprunts;debit;0;extended
+6275;Frais sur effets;debit;0;extended
+6276;Location de coffres;debit;0;extended
+6278;Autres frais et commissions sur prestations de services;debit;0;extended
+628;Divers;debit;0;base
+6281;Concours divers (cotisations, );debit;0;extended
+6284;Frais de recrutement de personnel;debit;0;extended
+629;Rabais, remises et ristournes obtenus sur autres services extérieurs;debit;0;base
+63;Impôts, taxes et versements assimilés;debit;0;short
+631;Impôts, taxes et versements assimilés sur rémunérations (administrations des impôts);debit;0;base
+6311;Taxe sur les salaires;debit;0;extended
+6312;Taxe d’apprentissage;debit;0;extended
+6313;Participation des employeurs à la formation professionnelle continue;debit;0;extended
+6314;Cotisation pour défaut d’investissement obligatoire dans la construction;debit;0;extended
+6318;Autres;debit;0;extended
+633;Impôts, taxes et versements assimilés sur rémunérations (autres organismes);debit;0;base
+6331;Versement de transport;debit;0;extended
+6332;Allocations logement;debit;0;extended
+6333;Participation des employeurs à la formation professionnelle continue;debit;0;extended
+6334;Participation des employeurs à l’effort de construction;debit;0;extended
+6335;Versements libératoires ouvrant droit à l’exonération de la taxe d’apprentissage;debit;0;extended
+6338;Autres;debit;0;extended
+635;Autres impôts, taxes et versements assimilés (administrations des impôts);debit;0;base
+6351;Impôts directs (sauf impôts sur les bénéfices);debit;0;extended
+63511;Contribution économique territoriale;debit;0;extended
+63512;Taxes foncières;debit;0;extended
+63513;Autres impôts locaux;debit;0;extended
+63514;Taxe sur les véhicules des sociétés;debit;0;extended
+6352;Taxe sur le chiffre d’affaires non récupérables;debit;0;extended
+6353;Impôts indirects;debit;0;extended
+6354;Droits d’enregistrement et de timbre;debit;0;extended
+63541;Droits de mutation;debit;0;extended
+6358;Autres droits;debit;0;base
+637;Autres impôts, taxes et versements assimilés (autres organismes);debit;0;base
+6371;Contribution sociale de solidarité à la charge des sociétés;debit;0;extended
+6372;Taxes perçues par les organismes publics internationaux;debit;0;extended
+6374;Impôts et taxes exigibles à l’Étranger;debit;0;extended
+6378;Taxes diverses;debit;0;extended
+64;Charges de personnel;debit;0;base
+641;Rémunérations du personnel;debit;0;short
+6411;Salaires, appointements;debit;0;extended
+6412;Congés payés;debit;0;extended
+6413;Primes et gratifications;debit;0;extended
+6414;Indemnités et avantages divers;debit;0;extended
+6415;Supplément familial;debit;0;extended
+644;Rémunération du travail de l’exploitant;debit;0;short
+645;Charges de sécurité sociale et de prévoyance;debit;0;short
+6451;Cotisations à l’URSSAF;debit;0;extended
+6452;Cotisations aux mutuelles;debit;0;extended
+6453;Cotisations aux caisses de retraites;debit;0;extended
+6454;Cotisations aux ASSEDIC;debit;0;extended
+6458;Cotisations aux autres organismes sociaux;debit;0;extended
+646;Cotisations sociales personnelles de l’exploitant;debit;0;short
+647;Autres charges sociales;debit;0;base
+6471;Prestations directes;debit;0;extended
+6472;Versements aux comités d’entreprise et d’établissement;debit;0;extended
+6473;Versements aux comités d’hygiène et de sécurité;debit;0;extended
+6474;Versements aux autres œuvres sociales;debit;0;extended
+6475;Médecine du travail, pharmacie;debit;0;extended
+648;Autres charges de personnel;debit;0;base
+65;Autres charges de gestion courante;debit;0;short
+651;Redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires;debit;0;base
+6511;Redevances pour concessions, brevets, licences, marques, procédés, logiciels;debit;0;extended
+6516;Droits d’auteur et de reproduction;debit;0;extended
+6518;Autres droits et valeurs similaires;debit;0;extended
+653;Jetons de présence;debit;0;base
+654;Pertes sur créances irrécouvrables;debit;0;base
+6541;Créances de l’exercice;debit;0;extended
+6544;Créances des exercices antérieurs;debit;0;extended
+655;Quote-part de résultat sur opérations faites en commun;debit;0;base
+6551;Quote-part de bénéfice transférée (comptabilité du gérant);debit;0;extended
+6555;Quote-part de perte supportée (comptabilité des associés non gérants);debit;0;extended
+656;Pertes de change sur créances commerciales;debit;0;base
+658;Charges diverses de gestion courante;debit;0;base
+66;Charges financières;debit;0;short
+661;Charges d’intérêts;debit;0;base
+6611;Intérêts des emprunts et dettes;debit;0;extended
+66116;des emprunts et dettes assimilées;debit;0;extended
+66117;des dettes rattachées à des participations;debit;0;extended
+6612;Charges de la fiducie, résultat de la période;debit;0;extended
+6615;Intérêts des comptes courants et des dépôts créditeurs;debit;0;extended
+6616;Intérêts bancaires et sur opérations de financement (escompte,...);debit;0;extended
+6617;Intérêts des obligations cautionnées;debit;0;extended
+6618;Intérêts des autres dettes;debit;0;extended
+66181;des dettes commerciales;debit;0;extended
+66188;des dettes diverses;debit;0;extended
+664;Pertes sur créances liées à des participations;debit;0;base
+665;Escomptes accordés;debit;0;base
+666;Pertes de change financières;debit;0;base
+667;Charges nettes sur cessions de valeurs mobilières de placement;debit;0;base
+668;Autres charges financières;debit;0;base
+67;Charges exceptionnelles;debit;0;short
+671;Charges exceptionnelles sur opérations de gestion;debit;0;base
+6711;Pénalités sur marchés (et dédits payés sur achats et ventes);debit;0;extended
+6712;Pénalités, amendes fiscales et pénales;debit;0;extended
+6713;Dons, libéralités;debit;0;extended
+6714;Créances devenues irrécouvrables dans l’exercice;debit;0;extended
+6715;Subventions accordées;debit;0;extended
+6717;Rappel d’impôts (autres qu’impôts sur les bénéfices);debit;0;extended
+6718;Autres charges exceptionnelles sur opérations de gestion;debit;0;extended
+672;(Compte à la disposition des entités pour enregistrer, en cours d’exercice, les charges sur exercices antérieurs);debit;0;base
+674;Opérations de constitution ou liquidation des fiducies;debit;0;base
+6741;Opérations liées à la constitution de fiducie – Transfert des éléments;debit;0;extended
+6742;Opérations liées à la liquidation de la fiducie;debit;0;extended
+675;Valeurs comptables des éléments d’actif cédés;debit;0;base
+6751;Immobilisations incorporelles;debit;0;extended
+6752;Immobilisations corporelles;debit;0;extended
+6756;Immobilisations financières;debit;0;extended
+6758;Autres éléments d’actif;debit;0;extended
+678;Autres charges exceptionnelles;debit;0;base
+6781;Malis provenant de clauses d’indexation;debit;0;extended
+6782;Lots;debit;0;extended
+6783;Malis provenant du rachat par l’entreprise d’actions et obligations émises par elle-même;debit;0;extended
+6788;Charges exceptionnelles diverses;debit;0;extended
+68;Dotations aux amortissements, aux dépréciations et aux provisions;debit;0;base
+681;Dotations aux amortissements, aux dépréciations et aux provisions – Charges d’exploitation;debit;0;short
+6811;Dotations aux amortissements sur immobilisations incorporelles et corporelles;debit;0;base
+68111;Immobilisations incorporelles;debit;0;extended
+68112;Immobilisations corporelles;debit;0;extended
+6812;Dotations aux amortissements des charges d’exploitation à répartir;debit;0;base
+6815;Dotations aux provisions d’exploitation;debit;0;base
+6816;Dotations pour dépréciations des immobilisations incorporelles et corporelles;debit;0;base
+68161;Immobilisations incorporelles;debit;0;extended
+68162;Immobilisations corporelles;debit;0;extended
+6817;Dotations pour dépréciations des actifs circulants;debit;0;base
+68173;Stocks et en-cours;debit;0;extended
+68174;Créances;debit;0;extended
+686;Dotations aux amortissements, aux dépréciations et aux provisions – Charges financières;debit;0;short
+6861;Dotations aux amortissements des primes de remboursement des obligations;debit;0;base
+6865;Dotations aux provisions financières;debit;0;base
+6866;Dotations pour dépréciations des éléments financiers;debit;0;base
+68662;Immobilisations financières;debit;0;extended
+68665;Valeurs mobilières de placement;debit;0;extended
+6868;Autres dotations;debit;0;base
+687;Dotations aux amortissements, aux dépréciations et aux provisions – Charges exceptionnelles;debit;0;short
+6871;Dotations aux amortissements exceptionnels des immobilisations;debit;0;base
+6872;Dotations aux provisions réglementées (immobilisations);debit;0;base
+68725;Amortissements dérogatoires;debit;0;extended
+6873;Dotations aux provisions réglementées (stocks);debit;0;base
+6874;Dotations aux autres provisions réglementées;debit;0;base
+6875;Dotations aux provisions exceptionnelles;debit;0;base
+6876;Dotations pour dépréciations exceptionnelles;debit;0;base
+69;Participation des salariés – Impôts sur les bénéfices et assimilés;debit;0;base
+691;Participation des salariés aux résultats;debit;0;short
+695;Impôts sur les bénéfices;debit;0;short
+6951;Impôts dus en France;debit;0;extended
+6952;Contribution additionnelle à l’impôt sur les bénéfices;debit;0;extended
+6954;Impôts dus à l’étranger;debit;0;extended
+696;Suppléments d’impôt sur les sociétés liés aux distributions;debit;0;base
+698;Intégration fiscale;debit;0;base
+6981;Intégration fiscale – Charges;debit;0;base
+6989;Intégration fiscale – Produits;debit;0;base
+699;Produits – Reports en arrière des déficits;debit;0;short
+7;Comptes de produits;credit;0;short
+70;Ventes de produits fabriqués, prestations de services, marchandises;credit;0;base
+701;Ventes de produits finis;credit;0;short
+7011;Produits finis (ou groupe) A;credit;0;extended
+7012;Produits finis (ou groupe) B;credit;0;extended
+702;Ventes de produits intermédiaires;credit;0;base
+703;Ventes de produits résiduels;credit;0;base
+704;Travaux;credit;0;base
+7041;Travaux de catégorie (ou activité) A;credit;0;base
+7042;Travaux de catégorie (ou activité) B;credit;0;base
+705;Études;credit;0;base
+706;Prestations de services;credit;0;short
+707;Ventes de marchandises;credit;0;short
+7071;Marchandises (ou groupe) A;credit;0;extended
+7072;Marchandises (ou groupe) B;credit;0;extended
+708;Produits des activités annexes;credit;0;short
+7081;Produits des services exploités dans l’intérêt du personnel;credit;0;extended
+7082;Commissions et courtages;credit;0;extended
+7083;Locations diverses;credit;0;extended
+7084;Mise à disposition de personnel facturée;credit;0;extended
+7085;Ports et frais accessoires facturés;credit;0;extended
+7086;Bonis sur reprises d’emballages consignés;credit;0;extended
+7087;Bonifications obtenues des clients et primes sur ventes;credit;0;extended
+7088;Autres produits d’activités annexes (cessions d’approvisionnements,);credit;0;extended
+709;Rabais, remises et ristournes accordés par l’entreprise;credit;0;short
+7091;sur ventes de produits finis;credit;0;extended
+7092;sur ventes de produits intermédiaires;credit;0;extended
+7094;sur travaux;credit;0;extended
+7095;sur études;credit;0;extended
+7096;sur prestations de services;credit;0;extended
+7097;sur ventes de marchandises;credit;0;extended
+7098;sur produits des activités annexes;credit;0;extended
+71;Production stockée (ou déstockage);credit;0;base
+713;Variation des stocks (en-cours de production, produits);credit;0;short
+7133;Variation des en-cours de production de biens;credit;0;base
+71331;Produits en cours;credit;0;extended
+71335;Travaux en cours;credit;0;extended
+7134;Variation des en-cours de production de services;credit;0;base
+71341;Études en cours;credit;0;extended
+71345;Prestations de services en cours;credit;0;extended
+7135;Variation des stocks de produits;credit;0;base
+71351;Produits intermédiaires;credit;0;extended
+71355;Produits finis;credit;0;extended
+71358;Produits résiduels;credit;0;extended
+72;Production immobilisée;credit;0;short
+721;Immobilisations incorporelles;credit;0;base
+722;Immobilisations corporelles;credit;0;base
+74;Subventions d’exploitation;credit;0;short
+75;Autres produits de gestion courante;credit;0;short
+751;Redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires;credit;0;base
+7511;Redevances pour concessions, brevets, licences, marques, procédés, logiciels;credit;0;extended
+7516;Droits d’auteur et de reproduction;credit;0;extended
+7518;Autres droits et valeurs similaires;credit;0;extended
+752;Revenus des immeubles non affectés à des activités professionnelles;credit;0;base
+753;Jetons de présence et rémunérations d’administrateurs, gérants,;credit;0;short
+754;Ristournes perçues des coopératives (provenant des excédents);credit;0;short
+755;Quote-parts de résultat sur opérations faites en commun;credit;0;short
+7551;Quote-part de perte transférée (comptabilité du gérant);credit;0;extended
+7555;Quote-part de bénéfice attribuée (comptabilité des associés non-gérants);credit;0;extended
+756;Gains de change sur créances commerciales;credit;0;base
+758;Produits divers de gestion courante;credit;0;base
+76;Produits financiers;credit;0;short
+761;Produits de participations;credit;0;base
+7611;Revenus des titres de participation;credit;0;extended
+7612;Produits de la fiducie, résultat de la période;credit;0;extended
+7616;Revenus sur autres formes de participation;credit;0;extended
+7617;Revenus des créances rattachées à des participations;credit;0;extended
+762;Produits des autres immobilisations financières;credit;0;base
+7621;Revenus des titres immobilisés;credit;0;extended
+7626;Revenus des prêts;credit;0;extended
+7627;Revenus des créances immobilisées;credit;0;extended
+763;Revenus des autres créances;credit;0;base
+7631;Revenus des créances commerciales;credit;0;extended
+7638;Revenus des créances diverses;credit;0;extended
+764;Revenus des valeurs mobilières de placement;credit;0;base
+765;Escomptes obtenus;credit;0;base
+766;Gains de change financiers;credit;0;base
+767;Produits nets sur cessions de valeurs mobilières de placement;credit;0;base
+768;Autres produits financiers;credit;0;base
+77;Produits exceptionnels;credit;0;short
+771;Produits exceptionnels sur opérations de gestion;credit;0;base
+7711;Dédits et pénalités perçus sur achats et sur ventes;credit;0;extended
+7713;Libéralités reçues;credit;0;extended
+7714;Rentrées sur créances amorties;credit;0;extended
+7715;Subventions d’équilibre;credit;0;extended
+7717;Dégrèvements d’impôts autres qu’impôts sur les bénéfices;credit;0;extended
+7718;Autres produits exceptionnels sur opérations de gestion;credit;0;extended
+772;(Compte à la disposition des entités pour enregistrer, en cours d’exercice, les produits sur exercices antérieurs);credit;0;base
+774;Opérations de constitution ou liquidation des fiducies;credit;0;base
+7741;Opérations liées à la constitution de fiducie – Transfert des éléments;credit;0;extended
+7742;Opérations liées à la liquidation de la fiducie;credit;0;extended
+775;Produits des cessions d’éléments d’actif;credit;0;base
+7751;Immobilisations incorporelles;credit;0;extended
+7752;Immobilisations corporelles;credit;0;extended
+7756;Immobilisations financières;credit;0;extended
+7758;Autres éléments d’actif;credit;0;extended
+777;Quote-part des subventions d’investissement virée au résultat de l’exercice;credit;0;base
+778;Autres produits exceptionnels;credit;0;base
+7781;Bonis provenant de clauses d’indexation;credit;0;extended
+7782;Lots;credit;0;extended
+7783;Bonis provenant du rachat par l’entreprise d’actions et d’obligations émises par elle-même;credit;0;extended
+7788;Produits exceptionnels divers;credit;0;extended
+78;Reprises sur amortissements, dépréciations et provisions;credit;0;base
+781;Reprises sur amortissements, dépréciations et provisions (à inscrire dans les produits d’exploitation);credit;0;short
+7811;Reprises sur amortissements des immobilisations incorporelles et corporelles;credit;0;base
+78111;Immobilisations incorporelles;credit;0;extended
+78112;Immobilisations corporelles;credit;0;extended
+7815;Reprises sur provisions d’exploitation;credit;0;base
+7816;Reprises sur dépréciations des immobilisations incorporelles et corporelles;credit;0;base
+78161;Immobilisations incorporelles;credit;0;extended
+78162;Immobilisations corporelles;credit;0;extended
+7817;Reprises sur dépréciations des actifs circulants;credit;0;base
+78173;Stocks et en-cours;credit;0;extended
+78174;Créances;credit;0;extended
+786;Reprises sur provisions pour risques et dépréciations (à inscrire dans les produits financiers);credit;0;short
+7865;Reprises sur provisions financières;credit;0;base
+7866;Reprises sur dépréciations des éléments financiers;credit;0;base
+78662;Immobilisations financières;credit;0;extended
+78665;Valeurs mobilières de placements;credit;0;extended
+787;Reprises sur provisions et dépréciations (à inscrire dans les produits exceptionnels);credit;0;short
+7872;Reprises sur provisions réglementées (immobilisations);credit;0;base
+78725;Amortissements dérogatoires;credit;0;extended
+78726;Provision spéciale de réévaluation;credit;0;extended
+78727;Plus-values réinvesties;credit;0;extended
+7873;Reprises sur provisions réglementées (stocks);credit;0;base
+7874;Reprises sur autres provisions réglementées;credit;0;base
+7875;Reprises sur provisions exceptionnelles;credit;0;base
+7876;Reprises sur dépréciations exceptionnelles;credit;0;base
+79;Transferts de charges;credit;0;short
+791;Transferts de charges d’exploitation;credit;0;base
+796;Transferts de charges financières;credit;0;base
+797;Transferts de charges exceptionnelles;credit;0;base
+8;Comptes spéciaux;debit;0;short
+80;Engagements;debit;0;base
+801;Engagements donnés par l’entité;debit;0;short
+8011;Avals, cautions, garanties;debit;0;extended
+8014;Effets circulant sous l’endos de l’entité;debit;0;extended
+8016;Redevances crédit-bail restant à courir;debit;0;extended
+80161;Crédit-bail mobilier;debit;0;extended
+80165;Crédit-bail immobilier;debit;0;extended
+8018;Autres engagements donnés;debit;0;extended
+802;Engagements reçus par l’entité;debit;0;short
+8021;Avals, cautions, garanties;debit;0;extended
+8024;Créances escomptées non échues;debit;0;extended
+8026;Engagements reçus pour utilisation en crédit-bail;debit;0;extended
+80261;Crédit-bail mobilier;debit;0;extended
+80265;Crédit-bail immobilier;debit;0;extended
+8028;Autres engagements reçus;debit;0;extended
+809;Contrepartie des engagements;debit;0;short
+8091;Contrepartie 801;debit;0;extended
+8092;Contrepartie 802;debit;0;extended
+88;Résultat en instance d’affectation;debit;0;base
+89;Bilan;debit;0;base
+890;Bilan d’ouverture;debit;0;extended
+891;Bilan de clôture;debit;0;extended

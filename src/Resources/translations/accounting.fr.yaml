@@ -1,0 +1,78 @@
+identity:
+  fr:
+    siret: SIRET
+    vat_number: N° TVA intracommunautaire
+
+mention:
+  fr:
+    ei: Entrepreneur individuel (EI).
+    rcs_exempt: Dispensé d'immatriculation au registre du commerce et des sociétés (RCS) et au répertoire des métiers (RM).
+    vat:
+      franchise: TVA non applicable, art. 293 B du CGI.
+      reverse_charge: Autoliquidation — TVA due par le preneur, art. 283-2 du CGI et art. 196 de la directive 2006/112/CE.
+      intra_eu_goods: Exonération de TVA, article 262 ter, I du CGI.
+      export: Exonération de TVA, article 262 I du CGI.
+      exempt: Exonération de TVA, article 261 du CGI.
+      debits_option: Option pour le paiement de la taxe d'après les débits.
+    payment:
+      l441: "Paiement à %days% jours. En cas de retard, pénalités au taux annuel de %rate% % (art. L441-10 du code de commerce) et indemnité forfaitaire pour frais de recouvrement de %flat_fee% € (art. D441-5). Pas d'escompte pour paiement anticipé."
+    quotation:
+      signature: "Devis valable jusqu'au %date%. Bon pour accord : date, signature et cachet."
+
+report:
+  fr:
+    intangible_assets: Immobilisations incorporelles
+    tangible_assets: Immobilisations corporelles
+    financial_assets: Immobilisations financières
+    advances_paid: Avances et acomptes versés sur commandes
+    trade_receivables: Clients et comptes rattachés
+    other_receivables: Autres créances
+    investments: Valeurs mobilières de placement
+    prepaid_expenses: Charges constatées d'avance
+    other_assets: Autres éléments d'actif
+    current_assets: Actif circulant
+    capital: Capital
+    reserves: Réserves
+    retained_earnings: Report à nouveau
+    grants: Subventions d'investissement
+    regulated_provisions: Provisions réglementées
+    other_equity: Autres fonds propres
+    borrowings: Emprunts et dettes assimilées
+    bank_overdrafts: Concours bancaires courants
+    advances_received: Avances et acomptes reçus
+    suppliers: Fournisseurs et comptes rattachés
+    tax_social_debts: Dettes fiscales et sociales
+    deferred_income: Produits constatés d'avance
+    other_debts: Autres dettes
+    sales_goods: Ventes de marchandises
+    sales_services: Production vendue (biens et services)
+    production: Production stockée et immobilisée
+    operating_grants: Subventions d'exploitation
+    other_operating_income: Autres produits d'exploitation
+    operating_income: Total des produits d'exploitation
+    purchases_goods: Achats de marchandises
+    stock_change_goods: Variation de stock (marchandises)
+    raw_materials: Achats de matières premières et approvisionnements
+    stock_change_raw: Variation de stock (matières premières)
+    external_charges: Autres achats et charges externes
+    taxes: Impôts, taxes et versements assimilés
+    wages: Salaires et traitements
+    social_charges: Charges sociales
+    depreciation: Dotations aux amortissements et provisions
+    other_operating_charges: Autres charges
+    operating_charges: Total des charges d'exploitation
+    operating_result: Résultat d'exploitation
+    joint_operations: Opérations en commun
+    joint_income: Bénéfice attribué ou perte transférée
+    joint_charges: Perte supportée ou bénéfice transféré
+    financial_income: Produits financiers
+    financial_charges: Charges financières
+    financial_result: Résultat financier
+    current_result: Résultat courant avant impôts
+    exceptional_income: Produits exceptionnels
+    exceptional_charges: Charges exceptionnelles
+    exceptional_result: Résultat exceptionnel
+    profit_sharing: Participation des salariés
+    income_tax: Impôts sur les bénéfices
+    other_income: Autres produits
+    other_charges: Autres charges

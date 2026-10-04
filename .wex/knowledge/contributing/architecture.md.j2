@@ -1,0 +1,7 @@
+## Architecture
+
+{{ path("src/Service/FrJurisdiction.php") }} extends the core `AbstractJurisdiction`: charts are read from {{ path("src/Resources/data/charts") }} (CSV converted from network's migrations), statement layouts from {{ path("src/Resources/data/reports") }} (2033-A/B structure: an account goes to the first line taking it, catch-all lines last so nothing is lost). Mention texts are translations ({{ path("src/Resources/translations/accounting.fr.yaml") }}).
+
+Everything else plugs into a core extension point: {{ path("src/Service/Exchange/FecExporter.php") }} is a `LedgerExporterInterface`, {{ path("src/Service/Exchange/FecImporter.php") }} an `EntryImporterInterface`, the forms in {{ path("src/Service/Vat") }} are `VatReturnFormInterface`, the parsers in {{ path("src/Service/Bank/Parser") }} are `BankStatementParserInterface`. Values that change by year (IS rates) are data keyed by the year they apply from.
+
+Tests run on synthetic fixtures; network's real FEC files were only read, never copied.

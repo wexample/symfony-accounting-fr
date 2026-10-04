@@ -1,0 +1,10 @@
+Numéro Compte   ;0000000X000
+Type         ;COMPTE
+Compte tenu en  ;euros
+Date            ;14/07/2021
+Solde (EUROS)   ;1 234,50
+Solde (FRANCS)  ;8 097,85
+;
+Date;Libellé;Montant(EUROS);Montant(FRANCS)
+13/07/2021;"PRELEVEMENT DE HEBERGEUR SAS REF : 123";-12,99;-85,21
+12/07/2021;"VIREMENT DE CLIENT A REF FACTURE 12";1.250,00;8199,64
