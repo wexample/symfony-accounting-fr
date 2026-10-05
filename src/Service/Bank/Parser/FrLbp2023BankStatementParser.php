@@ -51,6 +51,7 @@ class FrLbp2023BankStatementParser extends AbstractBankStatementParser
 
             if (str_starts_with($line, 'Date;Libellé;Montant')) {
                 $dataStart = $index + 1;
+
                 break;
             }
         }

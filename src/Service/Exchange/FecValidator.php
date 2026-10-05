@@ -38,6 +38,7 @@ class FecValidator
 
             if (18 !== count($cells)) {
                 $errors[] = sprintf('Line %d has %d columns instead of 18.', $number, count($cells));
+
                 continue;
             }
 

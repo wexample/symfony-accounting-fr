@@ -112,16 +112,19 @@ class FrLbp2019BankStatementParser extends AbstractBankStatementParser
 
             if (preg_match('/^Nouveau solde au (\d\d\/\d\d\/\d{4})/u', $line, $matches)) {
                 $new = ['date' => $matches[1]];
+
                 continue;
             }
 
             if (is_array($new) && ! isset($new['amount']) && preg_match('/^([+-])\s*([\d\s]+,\d\d)/u', $line, $matches)) {
                 $new['amount'] = ('-' === $matches[1] ? -1 : 1) * $this->parseAmount($matches[2]);
+
                 continue;
             }
 
             if (str_starts_with($line, 'Ancien solde au ')) {
                 $started = true;
+
                 continue;
             }
 
