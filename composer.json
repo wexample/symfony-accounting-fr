@@ -27,7 +27,7 @@
     "phpoffice/phpspreadsheet": "^2.0 || ^3.0 || ^4.0 || ^5.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "*",
+    "phpunit/phpunit": "^13",
     "wexample/symfony-testing": ">=2.0.0"
   },
   "repositories": [
