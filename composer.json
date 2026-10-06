@@ -3,7 +3,7 @@
   "description": "French law for symfony-accounting: PCG and association charts, FEC export and import, VAT returns (CA3, CA12), corporate tax, legal mentions, SIREN/SIRET, French bank formats",
   "type": "library",
   "license": "MIT",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "autoload": {
     "psr-4": {
       "Wexample\\SymfonyAccountingFr\\": "src/"
@@ -22,7 +22,7 @@
   ],
   "require": {
     "php": ">=8.5",
-    "wexample/symfony-accounting": ">=4.0.0",
+    "wexample/symfony-accounting": ">=5.0.0",
     "wexample/symfony-helpers": ">=15.0.0",
     "phpoffice/phpspreadsheet": "^2.0 || ^3.0 || ^4.0 || ^5.0"
   },

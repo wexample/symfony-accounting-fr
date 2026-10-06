@@ -1,6 +1,6 @@
 # symfony-accounting-fr
 
-Version: 2.0.1
+Version: 3.0.0
 
 ## Chart and accounts
 
@@ -65,7 +65,7 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-accounting: >=4.0.0
+- wexample/symfony-accounting: >=5.0.0
 - wexample/symfony-helpers: >=15.0.0
 - phpoffice/phpspreadsheet: ^2.0 || ^3.0 || ^4.0 || ^5.0
 
