@@ -4,6 +4,7 @@ namespace Wexample\SymfonyAccountingFr\Tests\Integration;
 
 use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
+use Wexample\SymfonyGeo\Entity\Country;
 use Doctrine\ORM\Tools\SchemaTool;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Wexample\SymfonyAccounting\Entity\BankAccount;
@@ -28,6 +29,27 @@ abstract class AbstractFrTestCase extends KernelTestCase
         (new SchemaTool($entityManager))->createSchema($entityManager->getMetadataFactory()->getAllMetadata());
     }
 
+    /**
+     * The country row of an ISO code, created on first use.
+     */
+    protected function country(string $code): Country
+    {
+        $repository = $this->em()->getRepository(Country::class);
+        $country = $repository->findOneBy(['isoAlpha2Code' => $code]);
+
+        if (! $country) {
+            $country = (new Country())
+                ->setIsoAlpha2Code($code)
+                ->setIsoAlpha3Code($code.'X')
+                ->setIsoNumericCode(str_pad((string) (ord($code[0]) * 3 + ord($code[1])), 3, '0', STR_PAD_LEFT))
+                ->setName($code);
+            $this->em()->persist($country);
+            $this->em()->flush();
+        }
+
+        return $country;
+    }
+
     protected function em(): EntityManagerInterface
     {
         return static::getContainer()->get('doctrine.orm.entity_manager');
@@ -45,7 +67,7 @@ abstract class AbstractFrTestCase extends KernelTestCase
 
     protected function createLedger(string $start = '2026-01-01'): Ledger
     {
-        $ledger = $this->service(LedgerService::class)->create('Société Test', 'FR', fiscalYearStart: new DateTimeImmutable($start));
+        $ledger = $this->service(LedgerService::class)->create('Société Test', $this->country('FR'), fiscalYearStart: new DateTimeImmutable($start));
         $ledger->setLegalIdentifier('73282932000009')->setVatNumber('FR44732829320')->setSettings(['default_vat_rate' => 2000]);
         $this->em()->flush();
 
@@ -60,7 +82,7 @@ abstract class AbstractFrTestCase extends KernelTestCase
         bool $customer = true,
         bool $supplier = false,
     ): Party {
-        $party = $this->service(PartyService::class)->create($ledger, $name, $customer, $supplier, $countryCode);
+        $party = $this->service(PartyService::class)->create($ledger, $name, $customer, $supplier, $countryCode ? $this->country($countryCode) : null);
         $party->setVatNumber($vatNumber);
         $this->em()->flush();
 

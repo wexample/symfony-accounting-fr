@@ -97,7 +97,7 @@ class FrAccountingTest extends AbstractFrTestCase
         $this->assertSame('A', $cells[13]);
         $this->assertSame('3600,00', $cells[11]);
 
-        $target = $this->service(LedgerService::class)->create('Dossier repris', 'FR', loadChart: false);
+        $target = $this->service(LedgerService::class)->create('Dossier repris', $this->country('FR'), loadChart: false);
         $result = $this->service(EntryImportService::class)->importContent($target, $file->content, options: ['create_fiscal_years' => true]);
         $this->assertTrue($result->isComplete());
         $this->assertSame(

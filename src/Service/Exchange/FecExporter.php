@@ -51,7 +51,7 @@ class FecExporter implements LedgerExporterInterface
 
     public function supports(FiscalYear $fiscalYear): bool
     {
-        return 'FR' === strtoupper((string) $fiscalYear->getLedger()->getCountryCode());
+        return 'FR' === $fiscalYear->getLedger()->getCountry()?->getIsoAlpha2Code();
     }
 
     public function export(

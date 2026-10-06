@@ -27,7 +27,7 @@ class FrCa3Form implements VatReturnFormInterface
 
     public function supports(Ledger $ledger): bool
     {
-        return 'FR' === strtoupper((string) $ledger->getCountryCode())
+        return 'FR' === $ledger->getCountry()?->getIsoAlpha2Code()
             && $ledger->isVatSubject()
             && VatPeriodicity::Annual !== $ledger->getVatPeriodicity()
             && 'fr_ca12' !== $ledger->getVatRegime();
