@@ -3,6 +3,7 @@
 namespace Wexample\SymfonyAccountingFr\Tests\Integration;
 
 use DateTimeImmutable;
+use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use Wexample\SymfonyAccounting\Exception\AccountingException;
@@ -11,6 +12,7 @@ use Wexample\SymfonyAccounting\Service\Document\CiiInvoiceReader;
 use Wexample\SymfonyAccounting\Service\Document\FacturXInvoiceReader;
 use Wexample\SymfonyAccounting\Service\Ledger\LedgerService;
 use Wexample\SymfonyRemoteDocumentReader\Service\DocumentReaderClient;
+use Wexample\SymfonyRemotePdfFactory\Service\PdfFactoryClient;
 use Wexample\SymfonyAccounting\Service\Document\InvoicePdfService;
 use Wexample\SymfonyAccounting\Service\Invoice\InvoiceEmissionService;
 use Wexample\SymfonyAccounting\Service\Invoice\InvoiceFactory;
@@ -143,6 +145,40 @@ class FacturXTest extends AbstractFrTestCase
         $this->assertSame($sale->calcPriceFinal(), $result->invoice->calcPriceFinal());
         $this->assertSame('factur-x', $result->invoice->getOrigin());
         $this->assertSame(['The PDF embeds a structured invoice without declaring it as Factur-X expects: not a valid Factur-X.'], $result->warnings);
+    }
+
+    /**
+     * The whole loop against running services: our Factur-X rendered by pdf-factory,
+     * read back by document-reader, recorded as the buyer's purchase. Skipped unless
+     * both URLs are given (PDF_FACTORY_URL, DOCUMENT_READER_URL).
+     */
+    public function testAFacturXRoundTripsThroughTheServices(): void
+    {
+        $pdfFactoryUrl = getenv('PDF_FACTORY_URL') ?: null;
+        $documentReaderUrl = getenv('DOCUMENT_READER_URL') ?: null;
+
+        if (! $pdfFactoryUrl || ! $documentReaderUrl) {
+            $this->markTestSkipped('Needs PDF_FACTORY_URL and DOCUMENT_READER_URL.');
+        }
+
+        $sale = $this->emitDiscounted();
+        $prepared = $this->service(InvoicePdfService::class)->prepare($sale, 'fr');
+        $pdf = (new PdfFactoryClient(HttpClient::create(), $pdfFactoryUrl))->render($prepared->document, $prepared->theme, $prepared->attachments, $prepared->output);
+
+        $documentReader = new DocumentReaderClient(HttpClient::create(['timeout' => 120]), $documentReaderUrl);
+        $reading = $documentReader->read('invoice.pdf', $pdf, pages: false);
+
+        $this->assertSame('pdf/a-3b', $reading->output['variant'] ?? null);
+        $this->assertTrue($reading->isFacturXDeclared());
+        $this->assertSame('EN 16931', $reading->output['facturx']['conformance']);
+        $this->assertSame('Alternative', $reading->output['facturx']['relationship']);
+        $this->assertSame($sale->getNumber(), json_decode($reading->getAttachment('invoice.json')->content, true)['number']);
+
+        $result = (new FacturXInvoiceReader($documentReader, $this->service(CiiInvoiceReader::class)))->read($this->buyerLedger(), $pdf);
+
+        $this->assertSame([], $result->warnings);
+        $this->assertSame($sale->getNumber(), $result->invoice->getNumber());
+        $this->assertSame($sale->calcPriceFinal(), $result->invoice->calcPriceFinal());
     }
 
     public function testAPdfWithoutXmlIsNoElectronicInvoice(): void
