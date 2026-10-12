@@ -13,9 +13,11 @@ use Wexample\SymfonyAccounting\Enum\InvoiceDirection;
 use Wexample\SymfonyAccounting\Enum\InvoiceType;
 use Wexample\SymfonyAccounting\Enum\JournalType;
 use Wexample\SymfonyAccounting\Enum\VatKind;
+use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\AbstractJurisdiction;
 use Wexample\SymfonyAccountingFr\Helper\FrIdentityHelper;
 use Wexample\SymfonyAccountingFr\Helper\FrRibHelper;
+use Wexample\SymfonyAccountingFr\Service\Vat\FrCa12DepositCalculator;
 
 /**
  * French law and practice: the PCG (and the association chart), rates, invoice
@@ -37,6 +39,19 @@ class FrJurisdiction extends AbstractJurisdiction
     public function getCountryCode(): ?string
     {
         return 'FR';
+    }
+
+    /**
+     * The simplified regime (annual return, CA12) pays two deposits in the year.
+     */
+    public function getVatDepositSchedule(
+        Ledger $ledger,
+        int $year,
+        int $previousNetVat
+    ): array {
+        return VatPeriodicity::Annual === $ledger->getVatPeriodicity()
+            ? (new FrCa12DepositCalculator())->compute($previousNetVat, $year)
+            : [];
     }
 
     public function getBankLocalDetails(string $iban): array

@@ -16,6 +16,7 @@ use Wexample\SymfonyAccounting\Service\Ledger\LedgerService;
 use Wexample\SymfonyAccounting\Service\Ledger\LetteringService;
 use Wexample\SymfonyAccounting\Service\Report\FinancialStatementService;
 use Wexample\SymfonyAccounting\Service\Report\TrialBalanceService;
+use Wexample\SymfonyAccounting\Service\Vat\VatPositionService;
 use Wexample\SymfonyAccounting\Service\Vat\VatReturnService;
 use Wexample\SymfonyAccountingFr\Service\Exchange\FecExporter;
 use Wexample\SymfonyAccountingFr\Service\Exchange\FecValidator;
@@ -219,6 +220,19 @@ class FrAccountingTest extends AbstractFrTestCase
         $deposits = $this->service(FrCa12DepositCalculator::class)->compute(20000 * 10, 2027);
         $this->assertSame([110000, 80000], array_column($deposits, 'amount'));
         $this->assertSame([], $this->service(FrCa12DepositCalculator::class)->compute(90000, 2027));
+    }
+
+    public function testTheVatPositionExpectsTheSimplifiedRegimeDeposits(): void
+    {
+        $ledger = $this->createLedger();
+        $ledger->setVatPeriodicity(VatPeriodicity::Annual);
+        $this->emitSale($ledger, $this->createParty($ledger), 1000000, '2026-03-02');
+
+        $position = $this->service(VatPositionService::class)->build($ledger, 2027);
+
+        $this->assertCount(2, $position->periods, 'Half-years: the deposits fall in July and December.');
+        $this->assertSame(0, $position->periods[0]->depositsExpected);
+        $this->assertSame(110000 + 80000, $position->periods[1]->depositsExpected);
     }
 
     public function testCorporateTax(): void

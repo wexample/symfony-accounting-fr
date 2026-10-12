@@ -61,7 +61,8 @@ class FrCa3Form implements VatReturnFormInterface
 
         $boxes['16'] = $due;
         $boxes['17'] = $vatReturn->sum($purchase, VatKind::IntraEuAcquisition)['due'];
-        $boxes['20'] = $vatReturn->getDeductible();
+        $boxes['19'] = $vatReturn->getDeductibleAssets();
+        $boxes['20'] = $vatReturn->getDeductible() - $vatReturn->getDeductibleAssets();
         $boxes['22'] = $vatReturn->previousCredit;
         $boxes['23'] = $deductible;
         $boxes['25'] = max(0, $deductible - $due);
