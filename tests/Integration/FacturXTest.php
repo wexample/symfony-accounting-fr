@@ -2,7 +2,15 @@
 
 namespace Wexample\SymfonyAccountingFr\Tests\Integration;
 
+use DateTimeImmutable;
+use Symfony\Component\HttpClient\MockHttpClient;
+use Symfony\Component\HttpClient\Response\MockResponse;
+use Wexample\SymfonyAccounting\Exception\AccountingException;
 use Wexample\SymfonyAccounting\Service\Document\CiiInvoiceBuilder;
+use Wexample\SymfonyAccounting\Service\Document\CiiInvoiceReader;
+use Wexample\SymfonyAccounting\Service\Document\FacturXInvoiceReader;
+use Wexample\SymfonyAccounting\Service\Ledger\LedgerService;
+use Wexample\SymfonyRemoteDocumentReader\Service\DocumentReaderClient;
 use Wexample\SymfonyAccounting\Service\Document\InvoicePdfService;
 use Wexample\SymfonyAccounting\Service\Invoice\InvoiceEmissionService;
 use Wexample\SymfonyAccounting\Service\Invoice\InvoiceFactory;
@@ -91,5 +99,69 @@ class FacturXTest extends AbstractFrTestCase
         $this->assertSame('EN 16931', $output->facturxConformance);
         $this->assertSame('Alternative', $output->facturxRelationship);
         $this->assertSame($this->service(CiiInvoiceBuilder::class)->build($invoice), $output->facturxXml);
+    }
+
+    public function testAReceivedCiiInvoiceBecomesAPurchase(): void
+    {
+        $sale = $this->emitDiscounted();
+        $xml = $this->service(CiiInvoiceBuilder::class)->build($sale);
+
+        $result = $this->service(CiiInvoiceReader::class)->read($this->buyerLedger(), $xml);
+        $purchase = $result->invoice;
+
+        $this->assertSame([], $result->warnings);
+        $this->assertTrue($result->partyCreated);
+        $this->assertSame('Société Test', $purchase->getParty()->getName());
+        $this->assertSame('FR7630006000011234567890189', $purchase->getParty()->getIban());
+        $this->assertSame('FR44732829320', $purchase->getParty()->getVatNumber());
+        $this->assertSame('Paris', $purchase->getParty()->getCity());
+        $this->assertSame($sale->getNumber(), $purchase->getNumber());
+        $this->assertSame($sale->getPaymentReference() ?? $sale->getNumber(), $purchase->getPaymentReference());
+        $this->assertSame($sale->calcDateDue()->format('Y-m-d'), $purchase->calcDateDue()->format('Y-m-d'));
+        $this->assertSame($sale->calcPriceFinal(), $purchase->calcPriceFinal());
+        $this->assertSame('cii', $purchase->getOrigin());
+    }
+
+    public function testAReceivedFacturXPdfIsReadThroughTheDocumentReader(): void
+    {
+        $sale = $this->emitDiscounted();
+        $xml = $this->service(CiiInvoiceBuilder::class)->build($sale);
+
+        $result = $this->facturXReader($xml, declared: false)->read($this->buyerLedger(), '%PDF-1.7');
+
+        $this->assertSame($sale->calcPriceFinal(), $result->invoice->calcPriceFinal());
+        $this->assertSame('factur-x', $result->invoice->getOrigin());
+        $this->assertSame(['The PDF embeds factur-x.xml without declaring it: not a valid Factur-X.'], $result->warnings);
+    }
+
+    public function testAPdfWithoutXmlIsNoElectronicInvoice(): void
+    {
+        $this->expectException(AccountingException::class);
+
+        $this->facturXReader(null)->read($this->buyerLedger(), '%PDF-1.7');
+    }
+
+    private function buyerLedger(): \Wexample\SymfonyAccounting\Entity\Ledger
+    {
+        return $this->service(LedgerService::class)->create('Client SAS', $this->country('FR'), fiscalYearStart: new DateTimeImmutable('2026-01-01'));
+    }
+
+    private function facturXReader(
+        ?string $xml,
+        bool $declared = true
+    ): FacturXInvoiceReader {
+        $response = [
+            'ok' => true,
+            'information' => [],
+            'language' => null,
+            'pdfa' => null,
+            'attachments' => $xml ? [['name' => 'factur-x.xml', 'mediaType' => 'text/xml', 'description' => '', 'relationship' => 'Alternative', 'size' => strlen($xml), 'content' => base64_encode($xml)]] : [],
+            'facturx' => $xml ? ['fileName' => 'factur-x.xml', 'documentType' => 'INVOICE', 'version' => '1.0', 'conformance' => 'EN 16931', 'declared' => $declared] : null,
+        ];
+
+        return new FacturXInvoiceReader(
+            new DocumentReaderClient(new MockHttpClient(new MockResponse(json_encode($response))), 'http://reader'),
+            $this->service(CiiInvoiceReader::class),
+        );
     }
 }
