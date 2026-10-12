@@ -25,6 +25,7 @@ use Wexample\SymfonyAccountingFr\Service\Exchange\FecExporter;
 use Wexample\SymfonyAccountingFr\Service\Exchange\FecValidator;
 use Wexample\SymfonyAccountingFr\Service\Tax\FrCorporateTaxService;
 use Wexample\SymfonyAccountingFr\Service\Tax\FrForm2033DataProvider;
+use Wexample\SymfonyAccountingFr\Service\Tax\FrLiasseDataProvider;
 use Wexample\SymfonyAccountingFr\Service\Vat\FrCa12DepositCalculator;
 
 class FrAccountingTest extends AbstractFrTestCase
@@ -162,6 +163,52 @@ class FrAccountingTest extends AbstractFrTestCase
         $forms = $this->service(FrForm2033DataProvider::class)->build($fiscalYear);
         $this->assertSame(350000, $forms['2033-B']['310']);
         $this->assertSame($forms['2033-A']['110'], $forms['2033-A']['180']);
+    }
+
+    public function testTheNormalRegimeReturnBalancesAndAgreesWithTheSimplifiedOne(): void
+    {
+        [, $fiscalYear] = $this->buildYear();
+        $liasse = $this->service(FrLiasseDataProvider::class)->build($fiscalYear);
+        $simplified = $this->service(FrForm2033DataProvider::class)->build($fiscalYear);
+
+        $this->assertSame($liasse['2050']['CO']['net'], $liasse['2051']['EE']);
+        $this->assertSame(120000, $liasse['2050']['BX']['gross']);
+        $this->assertSame(400000, $liasse['2052']['FG']);
+        $this->assertSame(50000, $liasse['2052']['FW']);
+        $this->assertSame(350000, $liasse['2052']['GG']);
+        $this->assertSame(350000, $liasse['2053']['HN']);
+        $this->assertSame($liasse['2051']['DI'], $liasse['2053']['HN']);
+        $this->assertSame($simplified['2033-B']['310'], $liasse['2053']['HN']);
+    }
+
+    /**
+     * Every account of the chart lands on a box of 2050–2051 (classes 1 to 5) or
+     * 2052–2053 (classes 6 and 7), whichever side its balance is on.
+     */
+    public function testEveryPcgAccountHasABoxOfTheNormalReturn(): void
+    {
+        [$ledger, $fiscalYear] = $this->buildYear();
+        $statements = $this->service(FinancialStatementService::class);
+
+        foreach ([[[1, 2, 3, 4, 5], ['liasse_2050', 'liasse_2051']], [[6, 7], ['liasse_2052', 'liasse_2053']]] as [$classes, $keys]) {
+            foreach ([100, -100] as $amount) {
+                $balances = [];
+                foreach ($this->service(AccountRepository::class)->findByLedger($ledger) as $account) {
+                    if (in_array($account->getClass(), $classes, true)) {
+                        $balances[$account->getNumber()] = new \Wexample\SymfonyAccounting\Class\TrialBalanceRow($account->getNumber(), '', max(0, $amount), max(0, -$amount));
+                    }
+                }
+
+                $counted = [];
+                foreach ($keys as $key) {
+                    foreach ($statements->compute($statements->getDefinition($fiscalYear, $key), new \Wexample\SymfonyAccounting\Class\TrialBalance($balances))->lines as $line) {
+                        $counted += $line['accounts'];
+                    }
+                }
+
+                $this->assertSame([], array_values(array_diff(array_keys($balances), array_map('strval', array_keys($counted)))), implode(', ', $keys).' '.$amount);
+            }
+        }
     }
 
     public function testEveryPcgIncomeAndChargeAccountIsReported(): void

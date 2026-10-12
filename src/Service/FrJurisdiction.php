@@ -247,6 +247,10 @@ class FrJurisdiction extends AbstractJurisdiction
         return [
             ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/balance_sheet.php'),
             ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/income_statement.php'),
+            ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/liasse_2050.php'),
+            ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/liasse_2051.php'),
+            ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/liasse_2052.php'),
+            ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/liasse_2053.php'),
         ];
     }
 
