@@ -128,6 +128,7 @@ class FrJurisdiction extends AbstractJurisdiction
             'payment_provider' => '511',
             'bank_fees' => '627',
             'vat_collected' => '44571',
+            'vat_collected_oss' => '44572',
             'vat_collected_pending' => '44574',
             'vat_deductible' => '44566',
             'vat_deductible_pending' => '44564',
