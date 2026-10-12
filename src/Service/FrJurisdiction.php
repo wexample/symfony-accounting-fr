@@ -54,6 +54,11 @@ class FrJurisdiction extends AbstractJurisdiction
             : [];
     }
 
+    public function isFacturXEmbedded(Ledger $ledger): bool
+    {
+        return true;
+    }
+
     public function getBankLocalDetails(string $iban): array
     {
         $rib = FrRibHelper::fromIban($iban);
