@@ -4,6 +4,7 @@ namespace Wexample\SymfonyAccountingFr\Tests\Unit;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use PHPUnit\Framework\Attributes\RequiresPhpExtension;
 use PHPUnit\Framework\TestCase;
 use Wexample\SymfonyAccountingFr\Service\Bank\Parser\FrCa2023BankStatementParser;
 use Wexample\SymfonyAccountingFr\Service\Bank\Parser\FrLbp2019BankStatementParser;
@@ -55,6 +56,8 @@ class FrBankParserTest extends TestCase
         $this->assertSame(1025113, $statement->balances[0]->balance);
     }
 
+    // An xlsx is a zip archive: PhpSpreadsheet reads it through ext-zip.
+    #[RequiresPhpExtension('zip')]
     public function testCa2023(): void
     {
         $spreadsheet = new Spreadsheet();
