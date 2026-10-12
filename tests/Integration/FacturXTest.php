@@ -122,6 +122,17 @@ class FacturXTest extends AbstractFrTestCase
         $this->assertSame('cii', $purchase->getOrigin());
     }
 
+    public function testADeclaredFacturXIsReadWithoutWarning(): void
+    {
+        $sale = $this->emitDiscounted();
+        $xml = $this->service(CiiInvoiceBuilder::class)->build($sale);
+
+        $result = $this->facturXReader($xml)->read($this->buyerLedger(), '%PDF-1.7');
+
+        $this->assertSame([], $result->warnings);
+        $this->assertSame($sale->calcPriceFinal(), $result->invoice->calcPriceFinal());
+    }
+
     public function testAReceivedFacturXPdfIsReadThroughTheDocumentReader(): void
     {
         $sale = $this->emitDiscounted();
@@ -131,7 +142,7 @@ class FacturXTest extends AbstractFrTestCase
 
         $this->assertSame($sale->calcPriceFinal(), $result->invoice->calcPriceFinal());
         $this->assertSame('factur-x', $result->invoice->getOrigin());
-        $this->assertSame(['The PDF embeds factur-x.xml without declaring it: not a valid Factur-X.'], $result->warnings);
+        $this->assertSame(['The PDF embeds a structured invoice without declaring it as Factur-X expects: not a valid Factur-X.'], $result->warnings);
     }
 
     public function testAPdfWithoutXmlIsNoElectronicInvoice(): void
@@ -150,14 +161,13 @@ class FacturXTest extends AbstractFrTestCase
         ?string $xml,
         bool $declared = true
     ): FacturXInvoiceReader {
-        $response = [
-            'ok' => true,
-            'information' => [],
-            'language' => null,
-            'pdfa' => null,
-            'attachments' => $xml ? [['name' => 'factur-x.xml', 'mediaType' => 'text/xml', 'description' => '', 'relationship' => 'Alternative', 'size' => strlen($xml), 'content' => base64_encode($xml)]] : [],
-            'facturx' => $xml ? ['fileName' => 'factur-x.xml', 'documentType' => 'INVOICE', 'version' => '1.0', 'conformance' => 'EN 16931', 'declared' => $declared] : null,
-        ];
+        $attachment = ['name' => 'factur-x.xml', 'mediaType' => 'text/xml', 'relationship' => 'Alternative', 'content' => base64_encode((string) $xml)];
+        $response = match (true) {
+            null === $xml => ['output' => [], 'unmapped' => ['file' => [], 'attachments' => [], 'content' => []]],
+            $declared => ['output' => ['variant' => 'pdf/a-3b', 'facturx' => ['conformance' => 'EN 16931', 'relationship' => 'Alternative', 'xml' => base64_encode($xml)]], 'unmapped' => ['file' => [], 'attachments' => [], 'content' => []]],
+            default => ['attachments' => [$attachment], 'unmapped' => ['file' => ['facturx' => ['fileName' => 'factur-x.xml', 'declared' => false]], 'attachments' => [], 'content' => []]],
+        };
+        $response = ['ok' => true, 'document' => ['type' => 'doc'], ...$response];
 
         return new FacturXInvoiceReader(
             new DocumentReaderClient(new MockHttpClient(new MockResponse(json_encode($response))), 'http://reader'),
