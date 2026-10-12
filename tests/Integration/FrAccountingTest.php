@@ -3,6 +3,9 @@
 namespace Wexample\SymfonyAccountingFr\Tests\Integration;
 
 use DateTimeImmutable;
+use Wexample\SymfonyAccounting\Enum\InvoiceDirection;
+use Wexample\SymfonyAccounting\Service\Invoice\InvoiceEmissionService;
+use Wexample\SymfonyAccounting\Service\Invoice\InvoiceFactory;
 use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Repository\AccountRepository;
 use Wexample\SymfonyAccounting\Service\Bank\AllocationService;
@@ -204,6 +207,37 @@ class FrAccountingTest extends AbstractFrTestCase
         $this->assertSame(6000, $boxes['20']);
         $this->assertSame(14550, $boxes['28']);
         $this->assertArrayNotHasKey('fr_ca12', $vat->fillForms($return));
+    }
+
+    public function testTheCa3PlacesSelfAssessedPurchasesAndSubcontracting(): void
+    {
+        $ledger = $this->createLedger();
+        $factory = $this->service(InvoiceFactory::class);
+        $emission = $this->service(InvoiceEmissionService::class);
+
+        // Services bought outside the EU: line B4; from the EU: line A3.
+        $this->emitPurchase($ledger, $this->createParty($ledger, 'US Inc', 'US', null, customer: false, supplier: true), 10000, '2026-03-02');
+        $this->emitPurchase($ledger, $this->createParty($ledger, 'Dutch BV', 'NL', 'NL123456789B01', customer: false, supplier: true), 20000, '2026-03-03');
+
+        // BTP subcontracting: the main contractor self-assesses (A2), the subcontractor charges none (E2).
+        $works = $factory->create($ledger, direction: InvoiceDirection::Purchase, party: $this->createParty($ledger, 'Sous-traitant', null, 'FR40303265045', customer: false, supplier: true), dateInvoice: new DateTimeImmutable('2026-03-04'))->setNumber('ST-1');
+        $factory->addItem($works, 'Gros œuvre', 30000)->setDomesticReverseCharge(true);
+        $sale = $factory->create($ledger, party: $this->createParty($ledger, 'Entreprise générale', null, 'FR44732829320'), dateInvoice: new DateTimeImmutable('2026-03-05'));
+        $factory->addItem($sale, 'Lot plomberie', 50000)->setDomesticReverseCharge(true);
+        $this->em()->flush();
+        $emission->emit($works);
+        $emission->emit($sale);
+
+        $vat = $this->service(VatReturnService::class);
+        $boxes = $vat->fillForms($vat->compute($ledger, new DateTimeImmutable('2026-03-01'), new DateTimeImmutable('2026-03-31')))['fr_ca3'];
+
+        $this->assertSame(30000, $boxes['A2']);
+        $this->assertSame(20000, $boxes['A3']);
+        $this->assertSame(10000, $boxes['B4']);
+        $this->assertSame(50000, $boxes['E2']);
+        $this->assertSame(60000, $boxes['08_base']);
+        $this->assertSame(12000, $boxes['08_tax']);
+        $this->assertSame(0, $boxes['28']);
     }
 
     public function testCa12AndDeposits(): void

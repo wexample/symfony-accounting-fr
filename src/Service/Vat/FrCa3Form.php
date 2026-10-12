@@ -40,18 +40,22 @@ class FrCa3Form implements VatReturnFormInterface
         $boxes = [
             // A. Taxable operations (bases).
             'A1' => $vatReturn->sum($sale, VatKind::Domestic)['base'],
+            // Other taxable operations: the purchases of construction works under the reverse charge.
+            'A2' => $vatReturn->sum($purchase, VatKind::DomesticReverseCharge)['base'],
             'A3' => $vatReturn->sum($purchase, VatKind::ReverseCharge)['base'],
             'B2' => $vatReturn->sum($purchase, VatKind::IntraEuAcquisition)['base'],
+            // Bought from a supplier not established in France (art. 283-1 CGI).
+            'B4' => $vatReturn->sum($purchase, VatKind::ImportedServices)['base'],
             // B. Non-taxable operations.
             'E1' => $vatReturn->sum($sale, VatKind::Export)['base'],
-            'E2' => $vatReturn->sum($sale, [VatKind::IntraEuServices, VatKind::Exempt, VatKind::OutOfScope])['base'],
+            'E2' => $vatReturn->sum($sale, [VatKind::IntraEuServices, VatKind::Exempt, VatKind::OutOfScope, VatKind::DomesticReverseCharge])['base'],
             'F2' => $vatReturn->sum($sale, VatKind::IntraEuGoods)['base'],
         ];
 
         // Gross VAT, per rate, sales and self-assessed purchases together.
         foreach (self::RATE_LINES as $rate => $line) {
             $sales = $vatReturn->sum($sale, VatKind::Domestic, $rate);
-            $selfAssessed = $vatReturn->sum($purchase, [VatKind::ReverseCharge, VatKind::IntraEuAcquisition], $rate);
+            $selfAssessed = $vatReturn->sum($purchase, [VatKind::ReverseCharge, VatKind::IntraEuAcquisition, VatKind::ImportedServices, VatKind::DomesticReverseCharge], $rate);
             $boxes[$line.'_base'] = $sales['base'] + $selfAssessed['base'];
             $boxes[$line.'_tax'] = $sales['due'] + $selfAssessed['due'];
         }

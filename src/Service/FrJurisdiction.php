@@ -187,6 +187,7 @@ class FrJurisdiction extends AbstractJurisdiction
             $key = match ($kind) {
                 VatKind::Franchise => 'mention.fr.vat.franchise',
                 VatKind::IntraEuServices => 'mention.fr.vat.reverse_charge',
+                VatKind::DomesticReverseCharge => 'mention.fr.vat.domestic_reverse_charge',
                 VatKind::IntraEuGoods => 'mention.fr.vat.intra_eu_goods',
                 VatKind::Export => 'mention.fr.vat.export',
                 VatKind::Exempt => 'mention.fr.vat.exempt',

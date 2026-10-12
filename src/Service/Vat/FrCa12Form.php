@@ -38,7 +38,7 @@ class FrCa12Form implements VatReturnFormInterface
 
         foreach (self::RATE_LINES as $rate => $line) {
             $sales = $vatReturn->sum(InvoiceDirection::Sale, VatKind::Domestic, $rate);
-            $selfAssessed = $vatReturn->sum(InvoiceDirection::Purchase, [VatKind::ReverseCharge, VatKind::IntraEuAcquisition], $rate);
+            $selfAssessed = $vatReturn->sum(InvoiceDirection::Purchase, [VatKind::ReverseCharge, VatKind::IntraEuAcquisition, VatKind::ImportedServices, VatKind::DomesticReverseCharge], $rate);
             $boxes[$line.'_base'] = $sales['base'] + $selfAssessed['base'];
             $boxes[$line.'_tax'] = $sales['due'] + $selfAssessed['due'];
         }

@@ -10,6 +10,7 @@ mention:
     vat:
       franchise: TVA non applicable, art. 293 B du CGI.
       reverse_charge: Autoliquidation — TVA due par le preneur, art. 283-2 du CGI et art. 196 de la directive 2006/112/CE.
+      domestic_reverse_charge: Autoliquidation — TVA due par le preneur assujetti, art. 283-2 nonies du CGI.
       intra_eu_goods: Exonération de TVA, article 262 ter, I du CGI.
       export: Exonération de TVA, article 262 I du CGI.
       exempt: Exonération de TVA, article 261 du CGI.
