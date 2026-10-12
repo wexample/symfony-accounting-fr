@@ -15,6 +15,7 @@ use Wexample\SymfonyAccounting\Enum\JournalType;
 use Wexample\SymfonyAccounting\Enum\VatKind;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\AbstractJurisdiction;
 use Wexample\SymfonyAccountingFr\Helper\FrIdentityHelper;
+use Wexample\SymfonyAccountingFr\Helper\FrRibHelper;
 
 /**
  * French law and practice: the PCG (and the association chart), rates, invoice
@@ -36,6 +37,18 @@ class FrJurisdiction extends AbstractJurisdiction
     public function getCountryCode(): ?string
     {
         return 'FR';
+    }
+
+    public function getBankLocalDetails(string $iban): array
+    {
+        $rib = FrRibHelper::fromIban($iban);
+
+        return $rib ? [
+            ['label' => 'bank.fr.bank_code', 'value' => $rib['bank']],
+            ['label' => 'bank.fr.branch_code', 'value' => $rib['branch']],
+            ['label' => 'bank.fr.account_number', 'value' => $rib['account']],
+            ['label' => 'bank.fr.rib_key', 'value' => $rib['key']],
+        ] : [];
     }
 
     public function getLegalIdentifierLabel(): string

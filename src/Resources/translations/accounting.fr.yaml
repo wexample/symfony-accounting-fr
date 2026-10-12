@@ -76,3 +76,10 @@ report:
     income_tax: Impôts sur les bénéfices
     other_income: Autres produits
     other_charges: Autres charges
+
+bank:
+  fr:
+    bank_code: Code banque
+    branch_code: Code guichet
+    account_number: N° de compte
+    rib_key: Clé RIB

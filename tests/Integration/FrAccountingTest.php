@@ -6,6 +6,7 @@ use DateTimeImmutable;
 use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Repository\AccountRepository;
 use Wexample\SymfonyAccounting\Service\Bank\AllocationService;
+use Wexample\SymfonyAccounting\Service\Document\InvoicePdfService;
 use Wexample\SymfonyAccounting\Service\Exchange\EntryImportService;
 use Wexample\SymfonyAccounting\Service\Exchange\LedgerExportService;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\JurisdictionRegistry;
@@ -44,6 +45,22 @@ class FrAccountingTest extends AbstractFrTestCase
 
         $mentions = $this->service(JurisdictionRegistry::class)->forLedger($ledger)->getInvoiceMentions($invoice);
         $this->assertSame(['mention.fr.payment.l441'], array_map(fn ($m) => $m->key, $mentions));
+    }
+
+    public function testTheRibIsPrintedBesideTheIban(): void
+    {
+        $ledger = $this->createLedger();
+        $bank = $this->createBankAccount($ledger)->setIban('FR76 3000 6000 0112 3456 7890 189')->setBic('AGRIFRPP');
+        $ledger->setDefaultBankAccount($bank);
+        $this->em()->flush();
+
+        $data = $this->service(InvoicePdfService::class)->prepare($this->emitSale($ledger, $this->createParty($ledger)), 'fr')->data;
+
+        $this->assertSame(
+            [['Code banque', '30006'], ['Code guichet', '00001'], ['N° de compte', '12345678901'], ['Clé RIB', '89']],
+            array_map(fn (array $detail) => [$detail['label'], $detail['value']], $data['payment']['bank']['localDetails'])
+        );
+        $this->assertSame('01/03/2026', $data['dates']['invoice']['formatted']);
     }
 
     public function testFranchiseAndReverseChargeMentions(): void
