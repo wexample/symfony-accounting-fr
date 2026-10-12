@@ -144,6 +144,8 @@ class FrJurisdiction extends AbstractJurisdiction
             'asset_disposal_value' => '675',
             'prepaid_expenses' => '486',
             'deferred_income' => '487',
+            'vat_adjustment_gain' => '758',
+            'vat_adjustment_loss' => '658',
             'rounding_gain' => '758',
             'rounding_loss' => '658',
             'result_profit' => '120',
