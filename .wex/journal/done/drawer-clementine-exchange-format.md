@@ -46,3 +46,7 @@ network's books were checked by an online accounting firm (Clementine) for 2018�
 
 1. Is Clementine still the accountant? If not, is a generic "operations CSV" export still useful?
 2. Should network import a firm's export (to compare), or only export to it?
+
+## Classé (2026-10-13)
+
+Abandonné : plus de cabinet Clementine. Le FEC (export, import, validateur) couvre les échanges avec un cabinet ; un rapport de rapprochement ne vaudra que si un cabinet retient à nouveau les livres en parallèle.

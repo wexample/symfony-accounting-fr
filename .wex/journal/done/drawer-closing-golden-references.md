@@ -39,3 +39,7 @@ A private fixtures folder (outside any public package, or encrypted) with `expec
 
 1. Where may private fixtures live (a private repo, the network 2027 app only)?
 2. Which years matter: all four, or only the last closed one?
+
+## Classé (2026-10-13)
+
+Abandonné : les bilans des cabinets ne sont pas fiables comme valeurs attendues. Le moteur se fiabilise avec des livres synthétiques calculés à la main, les invariants et les validateurs officiels (Test Compta Demat pour le FEC, Arelle pour le XBRL NBB).
