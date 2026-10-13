@@ -36,3 +36,7 @@ Copy the signature PNGs, `rib-wex.pdf`, `memento-wex.pdf`, or any filled output.
 ## Open questions
 
 Which forms does the owner still file himself vs the accountant? CA12 or CA3 (see recap decisions)?
+
+## Classé (2026-10-13)
+
+Abandonné : la liasse part en EDI et la TVA se saisit en ligne, donc ni superposition sur fonds de formulaire ni récap PDF. Les valeurs par case restent disponibles via les fournisseurs de données (2033, liasse, CA3, CA12) pour un affichage à l'écran.
