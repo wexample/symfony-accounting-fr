@@ -4,14 +4,14 @@ namespace Wexample\SymfonyAccountingFr\Tests\Integration;
 
 use DateTimeImmutable;
 use Wexample\SymfonyAccounting\Enum\InvoiceDirection;
-use Wexample\SymfonyAccounting\Service\Invoice\InvoiceEmissionService;
-use Wexample\SymfonyAccounting\Service\Invoice\InvoiceFactory;
 use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Repository\AccountRepository;
 use Wexample\SymfonyAccounting\Service\Bank\AllocationService;
 use Wexample\SymfonyAccounting\Service\Document\InvoicePdfService;
 use Wexample\SymfonyAccounting\Service\Exchange\EntryImportService;
 use Wexample\SymfonyAccounting\Service\Exchange\LedgerExportService;
+use Wexample\SymfonyAccounting\Service\Invoice\InvoiceEmissionService;
+use Wexample\SymfonyAccounting\Service\Invoice\InvoiceFactory;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\JurisdictionRegistry;
 use Wexample\SymfonyAccounting\Service\Ledger\FiscalYearClosingService;
 use Wexample\SymfonyAccounting\Service\Ledger\FiscalYearService;
