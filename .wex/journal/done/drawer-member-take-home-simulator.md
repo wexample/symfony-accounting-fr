@@ -29,3 +29,7 @@ Rates as dated configuration (not constants), a calculator service in this packa
 ## Open questions
 
 Is this useful for members today (cooperative fee + their own status), and for which statuses besides micro-entrepreneur?
+
+## Classé (2026-10-13)
+
+Abandonné : plus de membres qui facturent via la coopérative. Le moteur sert d'abord à la société individuelle du propriétaire.
