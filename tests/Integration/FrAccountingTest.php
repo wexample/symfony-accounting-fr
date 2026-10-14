@@ -71,7 +71,7 @@ class FrAccountingTest extends AbstractFrTestCase
     public function testFranchiseAndReverseChargeMentions(): void
     {
         $ledger = $this->createLedger();
-        $ledger->setVatSubject(false)->setLegalForm('EI');
+        $ledger->setVatSubject(false)->getOrganization()->setLegalForm('EI');
         $invoice = $this->emitSale($ledger, $this->createParty($ledger));
         $keys = array_map(fn ($m) => $m->key, $this->service(JurisdictionRegistry::class)->forLedger($ledger)->getInvoiceMentions($invoice));
         $this->assertSame(['mention.fr.ei', 'mention.fr.vat.franchise', 'mention.fr.payment.l441'], $keys);

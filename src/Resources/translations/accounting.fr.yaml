@@ -1,8 +1,3 @@
-identity:
-  fr:
-    siret: SIRET
-    vat_number: N° TVA intracommunautaire
-
 mention:
   fr:
     ei: Entrepreneur individuel (EI).

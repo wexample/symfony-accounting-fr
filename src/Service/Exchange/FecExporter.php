@@ -10,7 +10,7 @@ use Wexample\SymfonyAccounting\Enum\AccountRole;
 use Wexample\SymfonyAccounting\Interface\LedgerExporterInterface;
 use Wexample\SymfonyAccounting\Repository\JournalEntryRepository;
 use Wexample\SymfonyAccounting\Service\Ledger\ChartService;
-use Wexample\SymfonyAccountingFr\Helper\FrIdentityHelper;
+use Wexample\SymfonyOrganization\Helper\FrIdentityHelper;
 
 /**
  * Fichier des écritures comptables (art. A47 A-1 of the Livre des procédures

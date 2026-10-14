@@ -35,11 +35,11 @@ class FacturXTest extends AbstractFrTestCase
     private function emitDiscounted(): \Wexample\SymfonyAccounting\Entity\Invoice
     {
         $ledger = $this->createLedger();
-        $ledger->setPostalAddress('1 rue de la Paix')->setPostCode('75002')->setCity('Paris');
+        $ledger->getOrganization()->setPostalAddress('1 rue de la Paix')->setPostCode('75002')->setCity('Paris');
         $bank = $this->createBankAccount($ledger)->setIban('FR7630006000011234567890189')->setBic('AGRIFRPP');
         $ledger->setDefaultBankAccount($bank);
         $party = $this->createParty($ledger, 'Client SAS', 'FR', 'FR40303265045');
-        $party->setLegalIdentifier('303265045')->setPostalAddress('5 avenue Foch')->setPostCode('69006')->setCity('Lyon');
+        $party->getOrganization()->setLegalIdentifier('303265045')->setPostalAddress('5 avenue Foch')->setPostCode('69006')->setCity('Lyon');
 
         $factory = $this->service(InvoiceFactory::class);
         $invoice = $factory->create($ledger, party: $party, title: 'BC-12');

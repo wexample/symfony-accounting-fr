@@ -15,7 +15,6 @@ use Wexample\SymfonyAccounting\Enum\JournalType;
 use Wexample\SymfonyAccounting\Enum\VatKind;
 use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\AbstractJurisdiction;
-use Wexample\SymfonyAccountingFr\Helper\FrIdentityHelper;
 use Wexample\SymfonyAccountingFr\Helper\FrRibHelper;
 use Wexample\SymfonyAccountingFr\Service\Vat\FrCa12DepositCalculator;
 
@@ -71,27 +70,9 @@ class FrJurisdiction extends AbstractJurisdiction
         ] : [];
     }
 
-    public function getLegalIdentifierLabel(): string
-    {
-        return 'identity.fr.siret';
-    }
 
-    public function getVatNumberLabel(): string
-    {
-        return 'identity.fr.vat_number';
-    }
 
-    public function isLegalIdentifierValid(string $identifier): bool
-    {
-        return FrIdentityHelper::isValidSiret($identifier) || FrIdentityHelper::isValidSiren($identifier);
-    }
 
-    public function isVatNumberValid(string $vatNumber): bool
-    {
-        return str_starts_with(strtoupper(trim($vatNumber)), 'FR')
-            ? FrIdentityHelper::isValidVatNumber($vatNumber)
-            : parent::isVatNumberValid($vatNumber);
-    }
 
     public function getVatRates(): array
     {
