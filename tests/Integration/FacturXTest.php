@@ -35,11 +35,11 @@ class FacturXTest extends AbstractFrTestCase
     private function emitDiscounted(): \Wexample\SymfonyAccounting\Entity\Invoice
     {
         $ledger = $this->createLedger();
-        $ledger->getOrganization()->setPostalAddress('1 rue de la Paix')->setPostCode('75002')->setCity('Paris');
+        $ledger->getOrganization()->setAddress($this->address('1 rue de la Paix', '75002', 'Paris', 'FR'));
         $bank = $this->createBankAccount($ledger)->setIban('FR7630006000011234567890189')->setBic('AGRIFRPP');
         $ledger->setDefaultBankAccount($bank);
         $party = $this->createParty($ledger, 'Client SAS', 'FR', 'FR40303265045');
-        $party->getOrganization()->setLegalIdentifier('303265045')->setPostalAddress('5 avenue Foch')->setPostCode('69006')->setCity('Lyon');
+        $party->getOrganization()->setLegalIdentifier('303265045')->setAddress($this->address('5 avenue Foch', '69006', 'Lyon', 'FR'));
 
         $factory = $this->service(InvoiceFactory::class);
         $invoice = $factory->create($ledger, party: $party, title: 'BC-12');
@@ -116,7 +116,7 @@ class FacturXTest extends AbstractFrTestCase
         $this->assertSame('Société Test', $purchase->getParty()->getName());
         $this->assertSame('FR7630006000011234567890189', $purchase->getParty()->getIban());
         $this->assertSame('FR44732829320', $purchase->getParty()->getVatNumber());
-        $this->assertSame('Paris', $purchase->getParty()->getCity());
+        $this->assertSame('Paris', $purchase->getParty()->getAddress()->getCity());
         $this->assertSame($sale->getNumber(), $purchase->getNumber());
         $this->assertSame($sale->getPaymentReference() ?? $sale->getNumber(), $purchase->getPaymentReference());
         $this->assertSame($sale->calcDateDue()->format('Y-m-d'), $purchase->calcDateDue()->format('Y-m-d'));
