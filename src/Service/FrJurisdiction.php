@@ -17,6 +17,7 @@ use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\AbstractJurisdiction;
 use Wexample\SymfonyAccountingFr\Helper\FrRibHelper;
 use Wexample\SymfonyAccountingFr\Service\Vat\FrCa12DepositCalculator;
+use Wexample\SymfonyHelpers\Attribute\WorkerSafe;
 
 /**
  * French law and practice: the PCG (and the association chart), rates, invoice
@@ -33,6 +34,7 @@ class FrJurisdiction extends AbstractJurisdiction
     public const string DATASET_PCA = 'fr_pca';
 
     /** @var array<string, list<ChartAccountDefinition>> */
+    #[WorkerSafe('The French charts, read once from the bundled files.')]
     private array $charts = [];
 
     public function getCountryCode(): ?string
