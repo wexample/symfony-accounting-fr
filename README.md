@@ -1,6 +1,6 @@
 # symfony-accounting-fr
 
-Version: 5.0.0
+Version: 5.0.1
 
 ## Chart and accounts
 
@@ -64,7 +64,7 @@ The suite includes packages for configuration management, file handling, prompts
 
 - php: >=8.5
 - wexample/symfony-accounting: >=8.0.0
-- wexample/symfony-helpers: >=17.0.0
+- wexample/symfony-helpers: >=18.0.0
 - phpoffice/phpspreadsheet: ^2.0 || ^3.0 || ^4.0 || ^5.0
 - wexample/symfony-organization: >=3.0.0
 
