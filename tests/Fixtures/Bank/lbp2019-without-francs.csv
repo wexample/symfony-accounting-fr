@@ -1,0 +1,9 @@
+Numéro Compte   ;0000000X000
+Type         ;CCP
+Compte tenu en  ;euros
+Date            ;10/11/2026
+Solde (EUROS)   ;-522,66
+
+Date;Libellé;Montant(EUROS)
+09/11/2026;"PRELEVEMENT DE ASSUREUR REF : 123";-95,60
+05/11/2026;"VIREMENT DE CLIENT A REF FACTURE 12";1250,00

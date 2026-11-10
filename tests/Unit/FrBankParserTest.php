@@ -29,6 +29,18 @@ class FrBankParserTest extends TestCase
         $this->assertSame('2021-07-14', $statement->balances[0]->date->format('Y-m-d'));
     }
 
+    public function testLbp2019CsvWithoutFrancs(): void
+    {
+        $parser = new FrLbp2019BankStatementParser();
+        $content = $this->fixture('lbp2019-without-francs.csv');
+        $this->assertTrue($parser->supports($content));
+
+        $statement = $parser->parse($content);
+        $this->assertSame([-9560, 125000], array_map(fn ($t) => $t->amount, $statement->transactions));
+        $this->assertSame(-52266, $statement->balances[0]->balance);
+        $this->assertSame('2026-11-10', $statement->balances[0]->date->format('Y-m-d'));
+    }
+
     public function testLbp2019PdfText(): void
     {
         $parser = new FrLbp2019BankStatementParser();

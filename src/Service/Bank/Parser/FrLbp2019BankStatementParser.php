@@ -10,8 +10,9 @@ use Wexample\SymfonyAccounting\Service\Bank\Parser\AbstractBankStatementParser;
 /**
  * La Banque Postale, 2019 format, in two flavours:
  *
- * - the CSV export: 7 metadata lines (account, type, currency, date, balance
- *   in euros and francs), a blank line, then "Date;Libellé;Montant(EUROS);…";
+ * - the CSV export: metadata lines (account, type, currency, date, balance
+ *   in euros, and in francs in older exports), a blank line, then
+ *   "Date;Libellé;Montant(EUROS);…";
  * - the text copied from a PDF statement (`format: text`, or detected), since
  *   those PDFs cannot be read: records start with "dd/mm", amounts are "1 234,56".
  *   The text loses the debit/credit columns, so the side is guessed from the
@@ -78,7 +79,19 @@ class FrLbp2019BankStatementParser extends AbstractBankStatementParser
             $statement->addBalance(new ParsedBalance($this->parseDate($date, 'd/m/Y'), $this->parseAmount($balance)));
         }
 
-        foreach (array_slice($lines, 8) as $line) {
+        // The francs balance line was dropped from later exports: the data
+        // starts after the "Date;Libellé;…" header, wherever it sits.
+        $dataStart = null;
+
+        foreach ($lines as $index => $line) {
+            if (str_starts_with($line, 'Date;Libellé;')) {
+                $dataStart = $index + 1;
+
+                break;
+            }
+        }
+
+        foreach (array_slice($lines, (int) $dataStart) as $line) {
             if ('' === trim($line)) {
                 continue;
             }
