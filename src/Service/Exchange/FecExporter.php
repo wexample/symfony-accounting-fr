@@ -100,10 +100,7 @@ class FecExporter implements LedgerExporterInterface
      */
     private function sortedEntries(FiscalYear $fiscalYear): array
     {
-        $entries = $this->entryRepository->findBooked($fiscalYear);
-        usort($entries, fn (JournalEntry $a, JournalEntry $b) => [$a->getDate(), $a->getNumber()] <=> [$b->getDate(), $b->getNumber()]);
-
-        return $entries;
+        return $this->entryRepository->findBookedWithLines($fiscalYear, byDate: true);
     }
 
     private function buildRow(

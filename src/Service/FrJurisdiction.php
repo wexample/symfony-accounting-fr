@@ -3,16 +3,13 @@
 namespace Wexample\SymfonyAccountingFr\Service;
 
 use Wexample\SymfonyAccounting\Class\ChartAccountDefinition;
-use Wexample\SymfonyAccounting\Class\LatePenaltyPolicy;
 use Wexample\SymfonyAccounting\Class\LegalMention;
 use Wexample\SymfonyAccounting\Class\ReportDefinition;
 use Wexample\SymfonyAccounting\Entity\Invoice;
 use Wexample\SymfonyAccounting\Entity\Ledger;
-use Wexample\SymfonyAccounting\Enum\AccountNature;
 use Wexample\SymfonyAccounting\Enum\InvoiceDirection;
 use Wexample\SymfonyAccounting\Enum\InvoiceType;
 use Wexample\SymfonyAccounting\Enum\JournalType;
-use Wexample\SymfonyAccounting\Enum\VatKind;
 use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Service\Jurisdiction\AbstractJurisdiction;
 use Wexample\SymfonyAccountingFr\Helper\FrRibHelper;
@@ -27,6 +24,11 @@ use Wexample\SymfonyHelpers\Attribute\WorkerSafe;
  * - `fr_rcs_exempt` (bool): micro-entrepreneur exempt from RCS/RM registration;
  * - `fr_vat_debits_option` (bool): a service provider who opted for VAT on debits;
  * - `late_penalty_rate` (basis points per year), `late_penalty_flat_fee` (cents).
+ *
+ * Late payments (Code de commerce L441-10): the agreed rate, at least three
+ * times the legal interest rate; by default the ECB rate plus 10 points, here
+ * the generic 12 % a year unless the ledger sets its own. D441-5: 40 € flat
+ * recovery fee.
  */
 class FrJurisdiction extends AbstractJurisdiction
 {
@@ -71,10 +73,6 @@ class FrJurisdiction extends AbstractJurisdiction
             ['label' => 'bank.fr.rib_key', 'value' => $rib['key']],
         ] : [];
     }
-
-
-
-
 
     public function getVatRates(): array
     {
@@ -173,21 +171,7 @@ class FrJurisdiction extends AbstractJurisdiction
             $mentions[] = new LegalMention('mention.fr.rcs_exempt', LegalMention::PLACEMENT_HEADER);
         }
 
-        foreach ($invoice->getVatKinds() as $kind) {
-            $key = match ($kind) {
-                VatKind::Franchise => 'mention.fr.vat.franchise',
-                VatKind::IntraEuServices => 'mention.fr.vat.reverse_charge',
-                VatKind::DomesticReverseCharge => 'mention.fr.vat.domestic_reverse_charge',
-                VatKind::IntraEuGoods => 'mention.fr.vat.intra_eu_goods',
-                VatKind::Export => 'mention.fr.vat.export',
-                VatKind::Exempt => 'mention.fr.vat.exempt',
-                default => null,
-            };
-
-            if ($key) {
-                $mentions[] = new LegalMention($key, LegalMention::PLACEMENT_VAT);
-            }
-        }
+        array_push($mentions, ...$this->getVatKindMentions($invoice));
 
         if ($ledger->isVatSubject() && $ledger->getSetting('fr_vat_debits_option', false)) {
             $mentions[] = new LegalMention('mention.fr.vat.debits_option', LegalMention::PLACEMENT_VAT);
@@ -211,18 +195,9 @@ class FrJurisdiction extends AbstractJurisdiction
         return $mentions;
     }
 
-    /**
-     * Code de commerce L441-10: the agreed rate, at least three times the legal
-     * interest rate; by default the ECB rate plus 10 points, here 12 % a year
-     * unless the ledger sets its own. D441-5: 40 € flat recovery fee.
-     */
-    public function getLatePenaltyPolicy(Ledger $ledger): LatePenaltyPolicy
+    protected function getMentionKeyPrefix(): string
     {
-        return new LatePenaltyPolicy(
-            mode: $ledger->getSetting('late_penalty_mode', LatePenaltyPolicy::MODE_ANNUAL),
-            rate: (int) $ledger->getSetting('late_penalty_rate', 1200),
-            flatFee: (int) $ledger->getSetting('late_penalty_flat_fee', 4000),
-        );
+        return 'mention.fr.';
     }
 
     public function getReportDefinitions(): array
@@ -235,29 +210,5 @@ class FrJurisdiction extends AbstractJurisdiction
             ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/liasse_2052.php'),
             ReportDefinition::fromArray(require __DIR__.'/../Resources/data/reports/liasse_2053.php'),
         ];
-    }
-
-    /**
-     * @return list<ChartAccountDefinition>
-     */
-    private function readChart(string $path): array
-    {
-        $accounts = [];
-        $handle = fopen($path, 'r');
-        fgetcsv($handle, null, ';', '"', '');
-
-        while (false !== ($row = fgetcsv($handle, null, ';', '"', ''))) {
-            [$number, $label, $nature, $lettrable] = $row;
-            $accounts[] = new ChartAccountDefinition(
-                number: $number,
-                label: $label,
-                nature: AccountNature::from($nature),
-                lettrable: '1' === $lettrable,
-            );
-        }
-
-        fclose($handle);
-
-        return $accounts;
     }
 }

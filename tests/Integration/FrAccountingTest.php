@@ -3,7 +3,9 @@
 namespace Wexample\SymfonyAccountingFr\Tests\Integration;
 
 use DateTimeImmutable;
+use Wexample\SymfonyAccounting\Class\EntryDraft;
 use Wexample\SymfonyAccounting\Enum\InvoiceDirection;
+use Wexample\SymfonyAccounting\Enum\JournalType;
 use Wexample\SymfonyAccounting\Enum\VatPeriodicity;
 use Wexample\SymfonyAccounting\Repository\AccountRepository;
 use Wexample\SymfonyAccounting\Service\Bank\AllocationService;
@@ -17,6 +19,7 @@ use Wexample\SymfonyAccounting\Service\Ledger\FiscalYearClosingService;
 use Wexample\SymfonyAccounting\Service\Ledger\FiscalYearService;
 use Wexample\SymfonyAccounting\Service\Ledger\LedgerService;
 use Wexample\SymfonyAccounting\Service\Ledger\LetteringService;
+use Wexample\SymfonyAccounting\Service\Ledger\PostingService;
 use Wexample\SymfonyAccounting\Service\Report\FinancialStatementService;
 use Wexample\SymfonyAccounting\Service\Report\TrialBalanceService;
 use Wexample\SymfonyAccounting\Service\Vat\VatPositionService;
@@ -125,6 +128,41 @@ class FrAccountingTest extends AbstractFrTestCase
         $this->assertSame(
             $this->service(TrialBalanceService::class)->build($ledger, $fiscalYear)->getBalances(),
             $this->service(TrialBalanceService::class)->build($target)->getBalances()
+        );
+    }
+
+    /**
+     * The FEC lists entries by date, then number; the CSV of entries by
+     * number. An entry dated before one posted earlier shows where its date
+     * puts it in the FEC, where its number does in the CSV; the lines of an
+     * entry keep their order in both.
+     */
+    public function testExportsOrderEntriesByDateOrByNumber(): void
+    {
+        $ledger = $this->createLedger();
+        $fiscalYear = $this->service(FiscalYearService::class)->getForDate($ledger, new DateTimeImmutable('2026-06-01'));
+        $posting = $this->service(PostingService::class);
+        $posting->postDraft($ledger, (new EntryDraft(JournalType::Miscellaneous, new DateTimeImmutable('2026-03-10'), 'Later'))
+            ->add('512', 12000)->add('706', -10000)->add('44571', -2000));
+        $posting->postDraft($ledger, (new EntryDraft(JournalType::Miscellaneous, new DateTimeImmutable('2026-02-01'), 'Earlier'))
+            ->add('627', 500)->add('512', -500));
+        $this->em()->flush();
+        // Read back from the database, as an export is: not from what posting left in memory.
+        $this->em()->clear();
+        $ledger = $this->em()->find(\Wexample\SymfonyAccounting\Entity\Ledger::class, $ledger->getId());
+        $fiscalYear = $this->service(FiscalYearService::class)->getForDate($ledger, new DateTimeImmutable('2026-06-01'));
+
+        $export = $this->service(LedgerExportService::class);
+        $fec = array_map(static fn ($line) => explode('|', $line), array_slice(explode("\r\n", trim($export->export($fiscalYear, 'fec')->content)), 1));
+        $this->assertSame(
+            [['2', '20260201', '627'], ['2', '20260201', '512'], ['1', '20260310', '512'], ['1', '20260310', '706'], ['1', '20260310', '44571']],
+            array_map(static fn ($cells) => [$cells[2], $cells[3], $cells[4]], $fec)
+        );
+
+        $csv = array_map(static fn ($line) => str_getcsv($line, ';', '"', ''), array_slice(explode("\n", trim($export->export($fiscalYear, 'csv_entries')->content)), 1));
+        $this->assertSame(
+            [['1', '512'], ['1', '706'], ['1', '44571'], ['2', '627'], ['2', '512']],
+            array_map(static fn ($cells) => [$cells[2], $cells[4]], $csv)
         );
     }
 
