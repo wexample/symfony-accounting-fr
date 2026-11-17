@@ -1,6 +1,6 @@
 # symfony-accounting-fr
 
-Version: 7.0.1
+Version: 7.0.2
 
 French law for symfony-accounting: PCG and association charts, FEC export and import, VAT returns (CA3, CA12), corporate tax, legal mentions, SIREN/SIRET, French bank formats
 
